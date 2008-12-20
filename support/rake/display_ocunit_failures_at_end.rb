@@ -18,8 +18,8 @@ STDIN.each_line do |line|
       print "\n"
       puts line
     end
-  when /is missing/
-  when /^Error, could not create MachMessagePort for database doctor/
+  when /is missing/, /unrecognized selector sent/, /set a breakpoint in/, /NSFileManagerXTest_file_that_does_not_exist/,
+       /^Error, could not create MachMessagePort for database doctor/, /double free/
   else
     unless line.strip.empty?
       print "\n"

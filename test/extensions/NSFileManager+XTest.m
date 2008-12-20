@@ -16,7 +16,6 @@
 - (void) test_removeItemAtPathAndLogError_when_file_does_not_exist {
   id path = @"test/NSFileManagerXTest_file_that_does_not_exist.txt"; 
   id manager = [NSFileManager defaultManager];
-  NSLog(@"z: ignore the next NSFileManager logging message. it's just a test...");
   assert_false([manager removeItemAtPathAndLogError:path]);  
 }
 
