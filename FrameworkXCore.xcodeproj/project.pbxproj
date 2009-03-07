@@ -1,279 +1,917 @@
-{archiveVersion = 1; rootObject = 4883CBF3F1436263D7B0E078; classes = {}; objectVersion = 45; objects = {ED4ED795CD7CF9B2986E2A7C = {isa = PBXBuildFile; fileRef = 2EAA1DDB62EB98650BE4FA4A; settings = {ATTRIBUTES = (Public);};};
-752CA6E291531B46CBC0D79D = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XTrampoline.m";};
-3AEA6429DF374867048A187A = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XMethod.m";};
-8F6C643F9CBA290F0D9C95DE = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XFile.m";};
-169CB428D4E3DF092B4BD39F = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "FrameworkX.h";};
-E0AF550A37C9457F3E25F599 = {isa = PBXBuildFile; fileRef = 81EB3E7C1D853A15CBAF9E3F; settings = {ATTRIBUTES = (Public);};};
-0569AA17B7C5A17D2063BFD5 = {runOnlyForDeploymentPostprocesssing = 0; files = (C588C9AA02B8CEBB27E2633E, FBF1DE15906EB0B4A1B0B777, F333D79DBCA4323A2EC9F711, B1BD97DD4B4CE53CA2F584A2, 81AF463B11D31094B570083B, CC13630586229C70DE6B8866, 37E3F0D285B8745354A95DD2, 5B7D6852490F852B54524C03, A562281A39A57317982778A9, E0AF550A37C9457F3E25F599, F8841B3A13D48D905568DF58, CAB6B7E96CE683D4FFD8C9BE, F635C69E8CC9F34BD76DFA98, 3AA29FAF8622E019B9445D91, E240A8E05BCEE67AA67BF83B, 87DA753F1138F7AAF22242DE, 45B212F6F19FB661BAA75F51, 3EEFA79A4238E99FB4A69CE6, 9A63D224A7F50B426192E0F9, C8C60B5FBF744A1AFD183025, EC6F6D878C9549412D618CFC, 62D72CB3E3B8A3BBC8C0BCAD, 85873ECE866B7D6FFD449AAA, 3587E554D2E5890065041935, 90B18C011DAA3A3FE1EB1E42, C13DEB52D021719C89BF2669, CE569B1496B2DE7C16C9CC12, 92E9CA36C6F7637F303383F7, 0782CE14E26D7D5A0BAD7AA2, 2F2A3596ACBE0FC302313A1C, 2C7DFFDB8441CA7BBC6637F9, 2066DAB50E9AFB19A6753BBE, CF7FBB93956B17DCB3F26339); isa = PBXHeadersBuildPhase; buildActionMask = 2147483647;};
-73ED83B38AE7E97D89064F6B = {name = libicucore.dylib; isa = PBXFileReference; lastKnownFileType = wrapper.dylib; sourceTree = SDKROOT; path = "usr/lib/libicucore.dylib";};
-8FB0B5E0589B072738791038 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; sourceTree = "<group>"; fileEncoding = 4; path = "TestFile.plist";};
-E73C5634147B2313492090F1 = {isa = PBXGroup; sourceTree = "<group>"; children = (DB2EF928CAF69D02FFD89F50); path = infrastructure;};
-F915B06A20B869936FB4CD19 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "XTriplet.d";};
-D5BA2EF13762D32E6347F25C = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "OCMock+Extension.h";};
-1BCEA01D046F3EFD4901623D = {isa = PBXBuildFile; fileRef = 6FA4084CCA534C512CFEC3F4; settings = {ATTRIBUTES = (Public);};};
-7D34341E9D8CC8E863F1A75E = {isa = PBXBuildFile; fileRef = C729FF66BD090963F8C51514; settings = {ATTRIBUTES = (Public);};};
-59AD65CFEEC0D5343317738B = {isa = PBXBuildFile; fileRef = 551B5985548507CD8CFDE777; settings = {ATTRIBUTES = (Public);};};
-1A8485F930F9532376A3D7D5 = {name = FrameworkXCore; isa = PBXNativeTarget; productType = "com.apple.product-type.framework"; productReference = 513095C96B2AFC43EE5726C2; buildConfigurationList = 918737E18458658A53F2F079; productName = FrameworkXCore; buildRules = (); dependencies = (); buildPhases = (9CEA1BA5C3C88629A28521E7, AEF8206226892580EC85523B, 2451AC86F5B4D3C4EF5DA91C, 0569AA17B7C5A17D2063BFD5);};
-2C7DFFDB8441CA7BBC6637F9 = {isa = PBXBuildFile; fileRef = 6B95FD5D9119282E4606268A; settings = {ATTRIBUTES = (Public);};};
-04F7BF07E1A9C30AEFA6544E = {isa = PBXBuildFile; fileRef = C966C402DF3EC7562E2D2453; settings = {ATTRIBUTES = (Public);};};
-AEF8206226892580EC85523B = {runOnlyForDeploymentPostprocesssing = 0; files = (); isa = PBXResourcesBuildPhase; buildActionMask = 2147483647;};
-4883CBF3F1436263D7B0E078 = {isa = PBXProject; targets = (1A8485F930F9532376A3D7D5, B498C42955F439E7282E486E); buildConfigurationList = A80DCC5BA26007B19EBC6EA9; projectDirPath = ""; compatibilityVersion = "Xcode 3.1"; projectRoot = ""; mainGroup = 284A0CCB350826DA8BAE184F;};
-207AF500A0A089933F14FBE0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XAsyncTestHelper.m";};
-62F8A29EF5D6CA067BD2C502 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; sourceTree = "<group>"; fileEncoding = 4; path = "TestFile.plist";};
-81EB3E7C1D853A15CBAF9E3F = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSDictionary+X.h";};
-D5A994AE7D56C320DC29D35F = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSDateFormatter+X.d";};
-2ADF8CFE300980D752211C67 = {isa = PBXGroup; sourceTree = "<group>"; children = (52CACA380D6BA31455546854, 2BD8A65F7C6E20082A2E1105, E73C5634147B2313492090F1, EEFBFF2C74E608673D85A6DA, 8CADE8B7E3F1C05CDD38F89E, 130B94BE6134CA6801220758, 385428AB6DA92C97FC3196D5, 28A65FEDA0168DC99915FED3); path = test;};
-04C37C9A4AB4DE3C9C2523B5 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XTrampoline.h";};
-A40AB0EDC65CC8F439A3D561 = {buildConfigurations = (F9171267B57B8B7B267E2101, 786E789D980881AB896F34B7); defaultConfigurationIsVisible = 0; isa = XCConfigurationList; defaultConfigurationName = Release;};
-7AE432A71DA1A248097715B3 = {isa = PBXBuildFile; fileRef = DA1D4A5DEE31934E0EAA3220; settings = {ATTRIBUTES = (Public);};};
-918737E18458658A53F2F079 = {buildConfigurations = (361DF0A861678DF7276037D8, B780D2868810611C78576591); defaultConfigurationIsVisible = 0; isa = XCConfigurationList; defaultConfigurationName = Release;};
-95CABE856C0A982C588B3273 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSXMLDocument+Test.m";};
-BC2CE82C994B280EF9AE7BA4 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "XDoublet.d";};
-F8CFB55DE235DC8EFF921479 = {isa = PBXBuildFile; fileRef = 0E6FE21686F15F8D14FD8934; settings = {ATTRIBUTES = (Public);};};
-EF7C3DA9E069021D8D2BC39C = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XCollections.h";};
-EC6F6D878C9549412D618CFC = {isa = PBXBuildFile; fileRef = 169CB428D4E3DF092B4BD39F; settings = {ATTRIBUTES = (Public);};};
-9F0A50C9C4F14375FC9E0AC2 = {isa = PBXBuildFile; fileRef = F4A77C8EC30A113BE68BD5ED; settings = {ATTRIBUTES = (Public);};};
-A4AB3294D756AAA1FF82C553 = {isa = PBXBuildFile; fileRef = 38D8CB1B76B9472A25B8EFA8; settings = {ATTRIBUTES = (Public);};};
-1A7A993ACDDB84725ECAA4AE = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSInvocation+X.h";};
-5B7B90517394A2F2FBEDF758 = {isa = PBXBuildFile; fileRef = 594FFB9BE2C979A6C0A21316; settings = {ATTRIBUTES = (Public);};};
-2066DAB50E9AFB19A6753BBE = {isa = PBXBuildFile; fileRef = 04C37C9A4AB4DE3C9C2523B5; settings = {ATTRIBUTES = (Public);};};
-C3C2DE210D08FC21EEF43F01 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSObject+XTest.m";};
-9D56B793D88FF50F6585985F = {isa = PBXGroup; sourceTree = "<group>"; children = (B344656AF99F4A3DF8C388AA, 70CE12697B6752B9AFE1374D, 169CB428D4E3DF092B4BD39F, 56BB247E7EF160C4ECC2E78D, AFA6C7872319DF50E58B0C0E, 5FDDCFD8AA29EFE5E8C21829, A8ABC83654EB6B3B7B17997A, DE20B7BE4798B56BDF507F59, BC2CE82C994B280EF9AE7BA4, 79B867C1A1BF497676B515F5, DFEC85CBFC3C43F32EA65D47, 716DC92BF0AC304D06DABAE2, 2F92AA3A5E44CFEBF159BE39, 3AEA6429DF374867048A187A, 933F48C183C38FF863921A12, DA3478CEA19779C1C0A6259A, 1610080A866B09A2462D072E, 89C4DB45936DB27CD661633D, BBA26DA8253BC207FAAEE4F0, C03C35BF1E83EAC4A0AC4E9A, 2E25DAF2539E0841BBEC74B7, 6B95FD5D9119282E4606268A, EFF5D24F359AEAA801EE6450, 17D05DA33AFFD6EDF1317F4B, 04C37C9A4AB4DE3C9C2523B5, 752CA6E291531B46CBC0D79D, F915B06A20B869936FB4CD19, C57B63FDC8E5B52264B80757, A20535CD765EB90FDD7CCA3E); path = source;};
-3C49C64ADE385DCE5DC62BD9 = {isa = PBXBuildFile; fileRef = 8983C1F1E24787E2993535EF; settings = {ATTRIBUTES = (Public);};};
-DB55B3A2EBD21CC14184DD3B = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSObject+Test.h";};
-181659F132975ED7416AA37D = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSNumber+X.h";};
-923C554B31A1E44E27D87E09 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSMutableString+X.d";};
-F3B3C6CA7B1851ADC94FDA4A = {isa = PBXBuildFile; fileRef = 15ABFC96FB765FB9497E1E49; settings = {ATTRIBUTES = (Public);};};
-F3E953220572BEB1E3ABD11C = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSData+X.d";};
-405FA0A36A261BC00D184C80 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "SampleTest.m";};
-0782CE14E26D7D5A0BAD7AA2 = {isa = PBXBuildFile; fileRef = DA3478CEA19779C1C0A6259A; settings = {ATTRIBUTES = (Public);};};
-2F92AA3A5E44CFEBF159BE39 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XMethod.h";};
-B84B2CC15D04146AD2143261 = {name = libsqlite3.0.dylib; isa = PBXFileReference; lastKnownFileType = wrapper.dylib; sourceTree = SDKROOT; path = "/usr/lib/libsqlite3.0.dylib";};
-284A0CCB350826DA8BAE184F = {name = CustomTemplate; isa = PBXGroup; sourceTree = "<group>"; children = (8CF53CC8FF77FF96E3E732C1, 6EE6F5BE98D28C391D750401, 9D56B793D88FF50F6585985F, 2ADF8CFE300980D752211C67);};
-90A73E119A61AB979F08C405 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSArray+X.h";};
-78B60CA19255B80D32275B26 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "Io.h";};
-0D6F744F838A7A22B034575E = {isa = PBXBuildFile; fileRef = E223DCA661B181AB5A95DDEB; settings = {ATTRIBUTES = (Public);};};
-9D2EE12FFACDECABE23079A7 = {isa = PBXBuildFile; fileRef = 130B94BE6134CA6801220758; settings = {ATTRIBUTES = (Public);};};
-C8C60B5FBF744A1AFD183025 = {isa = PBXBuildFile; fileRef = F832A10042BE6CE686E0BC75; settings = {ATTRIBUTES = (Public);};};
-46C3DEF06503D06C677911A6 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSNumber+X.d";};
-3F3B64ED7CC939A771D55AA6 = {isa = PBXBuildFile; fileRef = A20535CD765EB90FDD7CCA3E; settings = {ATTRIBUTES = (Public);};};
-9E6784524EEFB3C69F58D9A9 = {isa = PBXBuildFile; fileRef = 9BFAB17477BADE39551F371A; settings = {ATTRIBUTES = (Public);};};
-2A90B8FC61FF812E522FCBEA = {isa = PBXBuildFile; fileRef = 207AF500A0A089933F14FBE0; settings = {ATTRIBUTES = (Public);};};
-F9171267B57B8B7B267E2101 = {name = Debug; isa = XCBuildConfiguration; buildSettings = {GCC_ENABLE_FIX_AND_CONTINUE = NO; OTHER_LDFLAGS = (-framework, Cocoa, -framework, SenTestingKit); ALWAYS_SEARCH_USER_PATHS = NO; WRAPPER_EXTENSION = octest; GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h"; COPY_PHASE_STRIP = NO; GCC_OPTIMIZATION_LEVEL = 0; FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks"; PREBINDING = NO; GCC_MODEL_TUNING = G5; GCC_PRECOMPILE_PREFIX_HEADER = YES; GCC_DYNAMIC_NO_PIC = NO; GCC_ENABLE_OBJC_EXCEPTIONS = YES; INFOPLIST_FILE = Untitled-Info.plist; INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles"; HEADER_SEARCH_PATHS = /usr/include/libxml2; PRODUCT_NAME = UnitTests;};};
-EEFBFF2C74E608673D85A6DA = {isa = PBXGroup; sourceTree = "<group>"; children = (653C6DEDF5B335237E263325, C729FF66BD090963F8C51514, 12A11B2C65554769F88B5067); path = io;};
-FE19D07FD4CE1F489949CBA9 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSDateFormatter+X.m";};
-C57B63FDC8E5B52264B80757 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XTriplet.h";};
-7D8537213B67EA8E3A56DF88 = {isa = PBXBuildFile; fileRef = 9D750FA82C6AC5641CC5B46F; settings = {ATTRIBUTES = (Public);};};
-8983C1F1E24787E2993535EF = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "StubbedMethodMemento.m";};
-38D8CB1B76B9472A25B8EFA8 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XTestCaseTest.m";};
-3B5DBB30A2642EDB04206508 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSInvocation+X.d";};
-B498C42955F439E7282E486E = {name = UnitTests; isa = PBXNativeTarget; productType = "com.apple.product-type.bundle"; productReference = B8EA36D46EAFCBD0C67135F3; buildConfigurationList = A40AB0EDC65CC8F439A3D561; productName = UnitTests; buildRules = (); dependencies = (); buildPhases = (59005A3D94FE0122F981876B, DA6EB883E13935730B4577F2);};
-87DA753F1138F7AAF22242DE = {isa = PBXBuildFile; fileRef = F6913E933E1CC6DFD60BE64E; settings = {ATTRIBUTES = (Public);};};
-A3C53A25DAE7A628A520B1AF = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSFileManager+X.d";};
-A10B1CD4547B2CCA70C1047E = {isa = PBXBuildFile; fileRef = E5B708F5C16BD6C87DE042AE; settings = {ATTRIBUTES = (Public);};};
-AFA6C7872319DF50E58B0C0E = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "Macros.h";};
-F7DBAC380329DF2DD7D22CA1 = {isa = PBXGroup; sourceTree = "<group>"; children = (2EAA1DDB62EB98650BE4FA4A, CEB1724A044E378C3B190731); path = extensions;};
-EE9B26014B586EEE9B5A2B55 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSFileManager+X.m";};
-78F94739474BB36B848F5460 = {isa = PBXBuildFile; fileRef = 8F6C643F9CBA290F0D9C95DE; settings = {ATTRIBUTES = (Public);};};
-2BD8A65F7C6E20082A2E1105 = {isa = PBXGroup; sourceTree = "<group>"; children = (08C56B3EFFF118F408A640E4, 0E6FE21686F15F8D14FD8934, 594FFB9BE2C979A6C0A21316, 399A28825F34FB0D02CB6002, BF1EFDDB6ACCFC342C3087C1, 15ABFC96FB765FB9497E1E49, E7AEC97CF2962940F8B71B49, 0EA7838E80D65CAAEEF6FDEA, 2FBD2632ABD112441405DF2B, 754DCD176DAAE10C349D10AF, D6AA001C16A83E0A889BCDB8, C3C2DE210D08FC21EEF43F01, E77C97723095249D42EA8CA1, 8FB0B5E0589B072738791038); path = extensions;};
-5DE8F3DCEC5479B57FC4F0F0 = {isa = PBXBuildFile; fileRef = 752CA6E291531B46CBC0D79D; settings = {ATTRIBUTES = (Public);};};
-A624390A1B12B15664520F8D = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XHash.m";};
-2368B98E9296547A73688DAF = {isa = PBXBuildFile; fileRef = F736FDE51035C867E708632C; settings = {ATTRIBUTES = (Public);};};
-CEB1724A044E378C3B190731 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSXMLDocument+TestTest.m";};
-DFEC85CBFC3C43F32EA65D47 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XDoublet.m";};
-FF200703C838D4DF6E011A83 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSMutableDictionary+X.d";};
-B6DA2B962A9AA287BA7D457D = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSInvocation+Additions.h";};
-623E6989651EFF14543F1CD8 = {isa = PBXBuildFile; fileRef = 513095C96B2AFC43EE5726C2; settings = {ATTRIBUTES = (Public);};};
-A8ABC83654EB6B3B7B17997A = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XCore.h";};
-8CADE8B7E3F1C05CDD38F89E = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "test_file.txt";};
-37E3F0D285B8745354A95DD2 = {isa = PBXBuildFile; fileRef = 43069F11E26D36521A790EE7; settings = {ATTRIBUTES = (Public);};};
-AD5094EB6BDFEC54D7160B6E = {isa = PBXBuildFile; fileRef = E7AEC97CF2962940F8B71B49; settings = {ATTRIBUTES = (Public);};};
-E13E8CAC89A9C9D0BF020131 = {isa = PBXBuildFile; fileRef = B47491DEB946BCFFCBB4E0E2; settings = {ATTRIBUTES = (Public);};};
-F8841B3A13D48D905568DF58 = {isa = PBXBuildFile; fileRef = 129B480C85436E5B200A61C5; settings = {ATTRIBUTES = (Public);};};
-2EAA1DDB62EB98650BE4FA4A = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSObject+TestTest.m";};
-5FDDCFD8AA29EFE5E8C21829 = {isa = PBXGroup; sourceTree = "<group>"; children = (0CF47A6745114A0176A8ED2F, 288ED6A4799F27DE41108C54); path = reg_ex;};
-3AA29FAF8622E019B9445D91 = {isa = PBXBuildFile; fileRef = C9A28DCF6A30A923F3795757; settings = {ATTRIBUTES = (Public);};};
-5440C5457F1EFA37F334137D = {isa = PBXBuildFile; fileRef = FE19D07FD4CE1F489949CBA9; settings = {ATTRIBUTES = (Public);};};
-4D61AFAF4B0932BD572813C3 = {isa = PBXBuildFile; fileRef = C75DEFC1BF9A47ADA06C6F91; settings = {ATTRIBUTES = (Public);};};
-08C56B3EFFF118F408A640E4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSArray+XTest.m";};
-F4A77C8EC30A113BE68BD5ED = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "TestHelper.m";};
-95100DF608B8823FF3E54927 = {isa = PBXBuildFile; fileRef = EE9B26014B586EEE9B5A2B55; settings = {ATTRIBUTES = (Public);};};
-BF1EFDDB6ACCFC342C3087C1 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSException+XTest.m";};
-A953B9139540302327919794 = {isa = PBXBuildFile; fileRef = BEE7D37EC5D890A2D5650E81; settings = {ATTRIBUTES = (Public);};};
-361DF0A861678DF7276037D8 = {name = Debug; isa = XCBuildConfiguration; buildSettings = {GCC_ENABLE_FIX_AND_CONTINUE = YES; ALWAYS_SEARCH_USER_PATHS = NO; FRAMEWORK_VERSION = A; WRAPPER_EXTENSION = framework; GCC_PREFIX_HEADER = FrameworkXCore_Prefix.pch; COPY_PHASE_STRIP = NO; GCC_OPTIMIZATION_LEVEL = 0; DYLIB_CURRENT_VERSION = 1; GCC_MODEL_TUNING = G5; GCC_PRECOMPILE_PREFIX_HEADER = YES; DYLIB_COMPATIBILITY_VERSION = 1; GCC_DYNAMIC_NO_PIC = NO; INFOPLIST_FILE = Info.plist; PRODUCT_NAME = FrameworkXCore; HEADER_SEARCH_PATHS = /usr/include/libxml2;};};
-9CEA1BA5C3C88629A28521E7 = {runOnlyForDeploymentPostprocesssing = 0; files = (542A12EA3C41C08A13827693, CBD10C6A5A40EFB804C60843, 7D8537213B67EA8E3A56DF88, 0D6F744F838A7A22B034575E, 9E6784524EEFB3C69F58D9A9, E13E8CAC89A9C9D0BF020131, 5440C5457F1EFA37F334137D, B8F537A6BBBF5D783F1A311B, 21833BD8CEFFE9579CF26763, 95100DF608B8823FF3E54927, D574E7F9DA5E9DDC67D9FA95, 1BCEA01D046F3EFD4901623D, 8D46D11FAAA2FB9957159DDA, 04F7BF07E1A9C30AEFA6544E, B5474E740BF6BCE50AF977D4, 58F665F658481377253C8393, 3ECE2C5FD129A4935A7ED778, 78F94739474BB36B848F5460, F963F9F4F7EF6D427F43A28C, F795ABB51E148DBD0F940847, 91DC05A42E96A7A12C5EAE6A, 9987E406AD8766901AE73AC8, BCC27BB3838DB0447EE63D8E, 763AD89A23FACBA66D4F3537, F582438DA5051341DF772EBF, 5DE8F3DCEC5479B57FC4F0F0, 3F3B64ED7CC939A771D55AA6); isa = PBXSourcesBuildPhase; buildActionMask = 2147483647;};
-57F3EF18EA12BF16AA8BE407 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "TestHelper.h";};
-34F2F2415F44DF4F8AF5FCEE = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSObject+Test.m";};
-CFBFBC6F4D11C2D281CF09BD = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSNumber+X.m";};
-94DF929E192A2998DC3B1CDD = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "XFile.d";};
-03D1E4268C60178AA0E9DDC8 = {isa = PBXBuildFile; fileRef = B84B2CC15D04146AD2143261; settings = {ATTRIBUTES = (Public);};};
-9987E406AD8766901AE73AC8 = {isa = PBXBuildFile; fileRef = 3AEA6429DF374867048A187A; settings = {ATTRIBUTES = (Public);};};
-933A7BD422FABD6AD31AD2E1 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XHashTest.m";};
-542A12EA3C41C08A13827693 = {isa = PBXBuildFile; fileRef = 28341599EB2DFD3940EAFC28; settings = {ATTRIBUTES = (Public);};};
-B344656AF99F4A3DF8C388AA = {isa = PBXGroup; sourceTree = "<group>"; children = (6353A8D07AC20DB05FD2A9EF, 1E0285A26963CD0F6B738A34, 28341599EB2DFD3940EAFC28, EF7C3DA9E069021D8D2BC39C, E18159059C09DF7B50095E0E, 2EF41519E6BE28BF58715C1B, A624390A1B12B15664520F8D); path = collections;};
-EFF5D24F359AEAA801EE6450 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XString.m";};
-8A1A732A3F826AF8E6CEF73B = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSDictionary+X.m";};
-F635C69E8CC9F34BD76DFA98 = {isa = PBXBuildFile; fileRef = 1A7A993ACDDB84725ECAA4AE; settings = {ATTRIBUTES = (Public);};};
-736DD44D55593E8B23DA1C47 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSDate+X.d";};
-513095C96B2AFC43EE5726C2 = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; sourceTree = BUILT_PRODUCTS_DIR; path = "FrameworkXCore.framework";};
-C9A28DCF6A30A923F3795757 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSMutableArray+X.h";};
-9A63D224A7F50B426192E0F9 = {isa = PBXBuildFile; fileRef = B47B40B445F4D13D31DFD2AA; settings = {ATTRIBUTES = (Public);};};
-8FDEC447E56D29F5AEA5D19A = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSString+X.d";};
-2451AC86F5B4D3C4EF5DA91C = {runOnlyForDeploymentPostprocesssing = 0; files = (2368B98E9296547A73688DAF, 03D1E4268C60178AA0E9DDC8, 3332D7017B6697D852924603, 79F5D8C49D78B347CBAC1B44, 4D61AFAF4B0932BD572813C3); isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647;};
-DA6EB883E13935730B4577F2 = {runOnlyForDeploymentPostprocesssing = 0; files = (623E6989651EFF14543F1CD8); isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647;};
-1610080A866B09A2462D072E = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XObject.m";};
-9BFAB17477BADE39551F371A = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSData+X.m";};
-C03C35BF1E83EAC4A0AC4E9A = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XQuadruplet.m";};
-59005A3D94FE0122F981876B = {runOnlyForDeploymentPostprocesssing = 0; files = (07029AF6E94FE24C877EBB7C, BB3EA12E8C479B6BFE0C4A34, DD6C837B53FD4D1EB49B51A0, F8CFB55DE235DC8EFF921479, 5B7B90517394A2F2FBEDF758, 6DF8E491DA49180B877A6315, 1E365AB7D1B6DF10E7AAA37C, F3B3C6CA7B1851ADC94FDA4A, AD5094EB6BDFEC54D7160B6E, FFDEE33B529D895DF00AD953, 7ACB91D5D2CA7386E06740C4, 625625D1E32CC75D5F38F716, 7D661A883764BF7B2E1A2212, 284184D29F16965BBF323232, 97AD0C7E607B5ECCE900E932, A953B9139540302327919794, B69E75FAB63C82ED01AFF85A, 6B48CF84A191DBC617EBC110, 5A23C3F27071EB6B1F6AF8F6, 3C49C64ADE385DCE5DC62BD9, 7AE432A71DA1A248097715B3, ED4ED795CD7CF9B2986E2A7C, DD8AD458B65D9E1EA30F9981, 59AD65CFEEC0D5343317738B, A10B1CD4547B2CCA70C1047E, A4AB3294D756AAA1FF82C553, 9F0A50C9C4F14375FC9E0AC2, 1BF02B6995B9ED0E588F4452, 2A90B8FC61FF812E522FCBEA, 751ECB42DD15B957C28076B8, 7D34341E9D8CC8E863F1A75E, 9D2EE12FFACDECABE23079A7, D7153D3D2290632D7DE455B4, 244389287269128F8E7FE505); isa = PBXSourcesBuildPhase; buildActionMask = 2147483647;};
-DD6C837B53FD4D1EB49B51A0 = {isa = PBXBuildFile; fileRef = 08C56B3EFFF118F408A640E4; settings = {ATTRIBUTES = (Public);};};
-F963F9F4F7EF6D427F43A28C = {isa = PBXBuildFile; fileRef = 288ED6A4799F27DE41108C54; settings = {ATTRIBUTES = (Public);};};
-E223DCA661B181AB5A95DDEB = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSArray+X.m";};
-625625D1E32CC75D5F38F716 = {isa = PBXBuildFile; fileRef = 754DCD176DAAE10C349D10AF; settings = {ATTRIBUTES = (Public);};};
-8D46D11FAAA2FB9957159DDA = {isa = PBXBuildFile; fileRef = 2BE81892C0586DAC76E3BADD; settings = {ATTRIBUTES = (Public);};};
-2174012FADF7FFBBB7EFF444 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSMutableDictionary+X.h";};
-22DE85F487512659CE42F350 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XTestCase.m";};
-D6AA001C16A83E0A889BCDB8 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSNumber+XTest.m";};
-3C62B511565E3EA877DFF9D9 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "Infrastructure.h";};
-E240A8E05BCEE67AA67BF83B = {isa = PBXBuildFile; fileRef = 2174012FADF7FFBBB7EFF444; settings = {ATTRIBUTES = (Public);};};
-716DC92BF0AC304D06DABAE2 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "XMethod.d";};
-751ECB42DD15B957C28076B8 = {isa = PBXBuildFile; fileRef = 22DE85F487512659CE42F350; settings = {ATTRIBUTES = (Public);};};
-2F2A3596ACBE0FC302313A1C = {isa = PBXBuildFile; fileRef = BBA26DA8253BC207FAAEE4F0; settings = {ATTRIBUTES = (Public);};};
-BCC27BB3838DB0447EE63D8E = {isa = PBXBuildFile; fileRef = 1610080A866B09A2462D072E; settings = {ATTRIBUTES = (Public);};};
-28341599EB2DFD3940EAFC28 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XArray.m";};
-A80DCC5BA26007B19EBC6EA9 = {buildConfigurations = (D464A6A7754E63410FA8D329, 2E7BAA5002B28E429A51538F); defaultConfigurationIsVisible = 0; isa = XCConfigurationList; defaultConfigurationName = Release;};
-E0AF129B1B8ADF7E6821B0A2 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSObject+X.m";};
-C13DEB52D021719C89BF2669 = {isa = PBXBuildFile; fileRef = A8ABC83654EB6B3B7B17997A; settings = {ATTRIBUTES = (Public);};};
-F333D79DBCA4323A2EC9F711 = {isa = PBXBuildFile; fileRef = 2EF41519E6BE28BF58715C1B; settings = {ATTRIBUTES = (Public);};};
-6B95FD5D9119282E4606268A = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XString.h";};
-CC13630586229C70DE6B8866 = {isa = PBXBuildFile; fileRef = 90A73E119A61AB979F08C405; settings = {ATTRIBUTES = (Public);};};
-3332D7017B6697D852924603 = {isa = PBXBuildFile; fileRef = 73ED83B38AE7E97D89064F6B; settings = {ATTRIBUTES = (Public);};};
-86CFA4F59A79424044C62C5F = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSNull+X.h";};
-2E7BAA5002B28E429A51538F = {name = Release; isa = XCBuildConfiguration; buildSettings = {GCC_WARN_ABOUT_RETURN_TYPE = YES; SDKROOT = macosx10.5; PREBINDING = NO; ARCHS = "$(ARCHS_STANDARD_32_BIT)"; GCC_WARN_UNUSED_VARIABLE = YES; HEADER_SEARCH_PATHS = /usr/include/libxml2; GCC_C_LANGUAGE_STANDARD = c99;};};
-1BF02B6995B9ED0E588F4452 = {isa = PBXBuildFile; fileRef = 35949EDF3E683F83FF7428ED; settings = {ATTRIBUTES = (Public);};};
-CF7FBB93956B17DCB3F26339 = {isa = PBXBuildFile; fileRef = C57B63FDC8E5B52264B80757; settings = {ATTRIBUTES = (Public);};};
-CE569B1496B2DE7C16C9CC12 = {isa = PBXBuildFile; fileRef = 79B867C1A1BF497676B515F5; settings = {ATTRIBUTES = (Public);};};
-91DC05A42E96A7A12C5EAE6A = {isa = PBXBuildFile; fileRef = DFEC85CBFC3C43F32EA65D47; settings = {ATTRIBUTES = (Public);};};
-45B212F6F19FB661BAA75F51 = {isa = PBXBuildFile; fileRef = 86CFA4F59A79424044C62C5F; settings = {ATTRIBUTES = (Public);};};
-2FBD2632ABD112441405DF2B = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSMutableString+XTest.m";};
-B69E75FAB63C82ED01AFF85A = {isa = PBXBuildFile; fileRef = 34F2F2415F44DF4F8AF5FCEE; settings = {ATTRIBUTES = (Public);};};
-BA9D6FE7E81B99E2F6861F4F = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSDictionary+X.d";};
-F582438DA5051341DF772EBF = {isa = PBXBuildFile; fileRef = EFF5D24F359AEAA801EE6450; settings = {ATTRIBUTES = (Public);};};
-62D72CB3E3B8A3BBC8C0BCAD = {isa = PBXBuildFile; fileRef = 78B60CA19255B80D32275B26; settings = {ATTRIBUTES = (Public);};};
-90B18C011DAA3A3FE1EB1E42 = {isa = PBXBuildFile; fileRef = 0CF47A6745114A0176A8ED2F; settings = {ATTRIBUTES = (Public);};};
-3B5B9BB40EC81EF2B23B514C = {isa = PBXGroup; sourceTree = "<group>"; children = (D5BA2EF13762D32E6347F25C); path = frameworks;};
-385428AB6DA92C97FC3196D5 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XObjectTest.m";};
-43069F11E26D36521A790EE7 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSData+X.h";};
-288ED6A4799F27DE41108C54 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "RegexKitLite.m";};
-DA1D4A5DEE31934E0EAA3220 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "StubbedMethodMementoCollection.m";};
-A6D8204D27757949503A01CD = {isa = PBXGroup; sourceTree = "<group>"; children = (3B5B9BB40EC81EF2B23B514C, B6DA2B962A9AA287BA7D457D, BEE7D37EC5D890A2D5650E81, DB55B3A2EBD21CC14184DD3B, 34F2F2415F44DF4F8AF5FCEE, EFDBFB7C01C256305F2EE569, 95CABE856C0A982C588B3273); path = extensions;};
-B5474E740BF6BCE50AF977D4 = {isa = PBXBuildFile; fileRef = CFBFBC6F4D11C2D281CF09BD; settings = {ATTRIBUTES = (Public);};};
-B1BD97DD4B4CE53CA2F584A2 = {isa = PBXBuildFile; fileRef = E591EFA80BEEF8CB97552F39; settings = {ATTRIBUTES = (Public);};};
-1E365AB7D1B6DF10E7AAA37C = {isa = PBXBuildFile; fileRef = BF1EFDDB6ACCFC342C3087C1; settings = {ATTRIBUTES = (Public);};};
-6FA4084CCA534C512CFEC3F4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSMutableArray+X.m";};
-D574E7F9DA5E9DDC67D9FA95 = {isa = PBXBuildFile; fileRef = 696B168D1D04C596CD353DF4; settings = {ATTRIBUTES = (Public);};};
-CBD10C6A5A40EFB804C60843 = {isa = PBXBuildFile; fileRef = A624390A1B12B15664520F8D; settings = {ATTRIBUTES = (Public);};};
-BBA26DA8253BC207FAAEE4F0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XQuadruplet.h";};
-97AD0C7E607B5ECCE900E932 = {isa = PBXBuildFile; fileRef = E77C97723095249D42EA8CA1; settings = {ATTRIBUTES = (Public);};};
-BB3EA12E8C479B6BFE0C4A34 = {isa = PBXBuildFile; fileRef = 933A7BD422FABD6AD31AD2E1; settings = {ATTRIBUTES = (Public);};};
-1ACC8BB3167FAA07A77093A5 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSException+X.m";};
-2BE81892C0586DAC76E3BADD = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSMutableDictionary+X.m";};
-AA7F7F619CE71E5C1A0636CF = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSArray+X.d";};
-3EEFA79A4238E99FB4A69CE6 = {isa = PBXBuildFile; fileRef = 181659F132975ED7416AA37D; settings = {ATTRIBUTES = (Public);};};
-7D661A883764BF7B2E1A2212 = {isa = PBXBuildFile; fileRef = D6AA001C16A83E0A889BCDB8; settings = {ATTRIBUTES = (Public);};};
-B780D2868810611C78576591 = {name = Release; isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; FRAMEWORK_VERSION = A; WRAPPER_EXTENSION = framework; GCC_PREFIX_HEADER = FrameworkXCore_Prefix.pch; DEBUG_INFORMATION_FORMAT = dwarf-with-dsym; DYLIB_CURRENT_VERSION = 1; GCC_MODEL_TUNING = G5; GCC_PRECOMPILE_PREFIX_HEADER = YES; DYLIB_COMPATIBILITY_VERSION = 1; INFOPLIST_FILE = Info.plist; HEADER_SEARCH_PATHS = /usr/include/libxml2; PRODUCT_NAME = FrameworkXCore;};};
-C588C9AA02B8CEBB27E2633E = {isa = PBXBuildFile; fileRef = 1E0285A26963CD0F6B738A34; settings = {ATTRIBUTES = (Public);};};
-52CACA380D6BA31455546854 = {isa = PBXGroup; sourceTree = "<group>"; children = (62F8A29EF5D6CA067BD2C502, 3D106FEF638730278515E957, 933A7BD422FABD6AD31AD2E1); path = collections;};
-1E0285A26963CD0F6B738A34 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XArray.h";};
-79B867C1A1BF497676B515F5 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XDoublet.h";};
-85873ECE866B7D6FFD449AAA = {isa = PBXBuildFile; fileRef = B4CE3770E622DC3505865311; settings = {ATTRIBUTES = (Public);};};
-C729FF66BD090963F8C51514 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XFileTest.m";};
-E81C83E1517A893AC7898D89 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSObject+X.d";};
-E77C97723095249D42EA8CA1 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSString+XTest.m";};
-696B168D1D04C596CD353DF4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSInvocation+X.m";};
-DA3478CEA19779C1C0A6259A = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XObject.h";};
-B8EA36D46EAFCBD0C67135F3 = {name = UnitTests.octest; isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; sourceTree = BUILT_PRODUCTS_DIR; path = "UnitTests.octest";};
-A20535CD765EB90FDD7CCA3E = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XTriplet.m";};
-6EE6F5BE98D28C391D750401 = {name = Products; isa = PBXGroup; sourceTree = "<group>"; children = (513095C96B2AFC43EE5726C2, B8EA36D46EAFCBD0C67135F3);};
-78492B756168E0076943E541 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "StubbedMethodMementoCollection.h";};
-E18159059C09DF7B50095E0E = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "XHash.d";};
-9D8D7E3E38EB288A252A869C = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XAsyncTestHelper.h";};
-81AF463B11D31094B570083B = {isa = PBXBuildFile; fileRef = 07D77BD6CB9242BF126F736D; settings = {ATTRIBUTES = (Public);};};
-BEE7D37EC5D890A2D5650E81 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSInvocation+Additions.m";};
-B4174B71E228BD5F33871D32 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSMutableArray+X.d";};
-786E789D980881AB896F34B7 = {name = Release; isa = XCBuildConfiguration; buildSettings = {GCC_ENABLE_FIX_AND_CONTINUE = NO; OTHER_LDFLAGS = (-framework, Cocoa, -framework, SenTestingKit); ALWAYS_SEARCH_USER_PATHS = NO; WRAPPER_EXTENSION = octest; GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h"; COPY_PHASE_STRIP = YES; DEBUG_INFORMATION_FORMAT = dwarf-with-dsym; FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks"; PREBINDING = NO; GCC_MODEL_TUNING = G5; GCC_PRECOMPILE_PREFIX_HEADER = YES; GCC_ENABLE_OBJC_EXCEPTIONS = YES; HEADER_SEARCH_PATHS = /usr/include/libxml2; INFOPLIST_FILE = "Untitled-Info.plist"; INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles"; PRODUCT_NAME = UnitTests; ZERO_LINK = NO;};};
-5A23C3F27071EB6B1F6AF8F6 = {isa = PBXBuildFile; fileRef = 405FA0A36A261BC00D184C80; settings = {ATTRIBUTES = (Public);};};
-0EA7838E80D65CAAEEF6FDEA = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSMutableDictionary+XTest.m";};
-375883F0A7627C496C07B39B = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "StubbedMethodMemento.h";};
-F832A10042BE6CE686E0BC75 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSString+X.h";};
-89C4DB45936DB27CD661633D = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "XQuadruplet.d";};
-B47B40B445F4D13D31DFD2AA = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSObject+X.h";};
-6353A8D07AC20DB05FD2A9EF = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "XArray.d";};
-653C6DEDF5B335237E263325 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "test_file.txt";};
-09706FC482D373C548F67DE2 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSFileManager+X.h";};
-130B94BE6134CA6801220758 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XMethodTest.m";};
-284184D29F16965BBF323232 = {isa = PBXBuildFile; fileRef = C3C2DE210D08FC21EEF43F01; settings = {ATTRIBUTES = (Public);};};
-D9DF888D41E149897B0E39B2 = {name = "Linked Frameworks"; isa = PBXGroup; sourceTree = "<group>"; children = (F736FDE51035C867E708632C, B84B2CC15D04146AD2143261, 73ED83B38AE7E97D89064F6B, CF11A15DF99415EE2677433A, C75DEFC1BF9A47ADA06C6F91);};
-17D05DA33AFFD6EDF1317F4B = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "XTrampoline.d";};
-DD8AD458B65D9E1EA30F9981 = {isa = PBXBuildFile; fileRef = CEB1724A044E378C3B190731; settings = {ATTRIBUTES = (Public);};};
-7ACB91D5D2CA7386E06740C4 = {isa = PBXBuildFile; fileRef = 2FBD2632ABD112441405DF2B; settings = {ATTRIBUTES = (Public);};};
-F6913E933E1CC6DFD60BE64E = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSMutableString+X.h";};
-244389287269128F8E7FE505 = {isa = PBXBuildFile; fileRef = 28A65FEDA0168DC99915FED3; settings = {ATTRIBUTES = (Public);};};
-578575BFB160F0F0BFC250BB = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSDateFormatter+X.h";};
-58F665F658481377253C8393 = {isa = PBXBuildFile; fileRef = E0AF129B1B8ADF7E6821B0A2; settings = {ATTRIBUTES = (Public);};};
-E5B708F5C16BD6C87DE042AE = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "StubbedMethodMementoTest.m";};
-07029AF6E94FE24C877EBB7C = {isa = PBXBuildFile; fileRef = 3D106FEF638730278515E957; settings = {ATTRIBUTES = (Public);};};
-763AD89A23FACBA66D4F3537 = {isa = PBXBuildFile; fileRef = C03C35BF1E83EAC4A0AC4E9A; settings = {ATTRIBUTES = (Public);};};
-F795ABB51E148DBD0F940847 = {isa = PBXBuildFile; fileRef = DE20B7BE4798B56BDF507F59; settings = {ATTRIBUTES = (Public);};};
-FBF1DE15906EB0B4A1B0B777 = {isa = PBXBuildFile; fileRef = EF7C3DA9E069021D8D2BC39C; settings = {ATTRIBUTES = (Public);};};
-2E25DAF2539E0841BBEC74B7 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "XString.d";};
-8CF53CC8FF77FF96E3E732C1 = {name = Frameworks; isa = PBXGroup; sourceTree = "<group>"; children = (D9DF888D41E149897B0E39B2);};
-79F5D8C49D78B347CBAC1B44 = {isa = PBXBuildFile; fileRef = CF11A15DF99415EE2677433A; settings = {ATTRIBUTES = (Public);};};
-0CF47A6745114A0176A8ED2F = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "RegexKitLite.h";};
-A562281A39A57317982778A9 = {isa = PBXBuildFile; fileRef = 578575BFB160F0F0BFC250BB; settings = {ATTRIBUTES = (Public);};};
-EFDBFB7C01C256305F2EE569 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSXMLDocument+Test.h";};
-129B480C85436E5B200A61C5 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSException+X.h";};
-CF11A15DF99415EE2677433A = {name = libxml2.2.dylib; isa = PBXFileReference; lastKnownFileType = wrapper.dylib; sourceTree = SDKROOT; path = "usr/lib/libxml2.2.dylib";};
-933F48C183C38FF863921A12 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "XObject.d";};
-F736FDE51035C867E708632C = {name = Foundation.framework; isa = PBXFileReference; lastKnownFileType = wrapper.framework; sourceTree = SDKROOT; path = "System/Library/Frameworks/Foundation.framework";};
-B8F537A6BBBF5D783F1A311B = {isa = PBXBuildFile; fileRef = 8A1A732A3F826AF8E6CEF73B; settings = {ATTRIBUTES = (Public);};};
-2EF41519E6BE28BF58715C1B = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XHash.h";};
-551B5985548507CD8CFDE777 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "StubbedMethodMementoCollectionTest.m";};
-5BFF09D4982B22765D1A1F44 = {isa = PBXGroup; sourceTree = "<group>"; children = (F7DBAC380329DF2DD7D22CA1, 551B5985548507CD8CFDE777, E5B708F5C16BD6C87DE042AE, C2235777809FFA41B5A45771, 38D8CB1B76B9472A25B8EFA8); path = test;};
-E591EFA80BEEF8CB97552F39 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "_XParameterSet.h";};
-6B48CF84A191DBC617EBC110 = {isa = PBXBuildFile; fileRef = 95CABE856C0A982C588B3273; settings = {ATTRIBUTES = (Public);};};
-5B7D6852490F852B54524C03 = {isa = PBXBuildFile; fileRef = E6FE4DBDE3415F7D5CC1248A; settings = {ATTRIBUTES = (Public);};};
-C2235777809FFA41B5A45771 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "TestMacros.h";};
-D7153D3D2290632D7DE455B4 = {isa = PBXBuildFile; fileRef = 385428AB6DA92C97FC3196D5; settings = {ATTRIBUTES = (Public);};};
-B4CE3770E622DC3505865311 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XFile.h";};
-D0F7DA40C96275E66319A751 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSString+X.m";};
-CAB6B7E96CE683D4FFD8C9BE = {isa = PBXBuildFile; fileRef = 09706FC482D373C548F67DE2; settings = {ATTRIBUTES = (Public);};};
-3587E554D2E5890065041935 = {isa = PBXBuildFile; fileRef = AFA6C7872319DF50E58B0C0E; settings = {ATTRIBUTES = (Public);};};
-0C7302BB29915B5E3B8E3E1B = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XTestCase.h";};
-28A65FEDA0168DC99915FED3 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XStringTest.m";};
-DE20B7BE4798B56BDF507F59 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XCore.m";};
-3ECE2C5FD129A4935A7ED778 = {isa = PBXBuildFile; fileRef = D0F7DA40C96275E66319A751; settings = {ATTRIBUTES = (Public);};};
-56BB247E7EF160C4ECC2E78D = {isa = PBXGroup; sourceTree = "<group>"; children = (78B60CA19255B80D32275B26, 94DF929E192A2998DC3B1CDD, B4CE3770E622DC3505865311, 8F6C643F9CBA290F0D9C95DE); path = io;};
-07D77BD6CB9242BF126F736D = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "Extensions.h";};
-0E6FE21686F15F8D14FD8934 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSData+XTest.m";};
-C966C402DF3EC7562E2D2453 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSMutableString+X.m";};
-70CE12697B6752B9AFE1374D = {isa = PBXGroup; sourceTree = "<group>"; children = (E591EFA80BEEF8CB97552F39, 9D750FA82C6AC5641CC5B46F, 07D77BD6CB9242BF126F736D, AA7F7F619CE71E5C1A0636CF, 90A73E119A61AB979F08C405, E223DCA661B181AB5A95DDEB, F3E953220572BEB1E3ABD11C, 43069F11E26D36521A790EE7, 9BFAB17477BADE39551F371A, 736DD44D55593E8B23DA1C47, E6FE4DBDE3415F7D5CC1248A, B47491DEB946BCFFCBB4E0E2, D5A994AE7D56C320DC29D35F, 578575BFB160F0F0BFC250BB, FE19D07FD4CE1F489949CBA9, BA9D6FE7E81B99E2F6861F4F, 81EB3E7C1D853A15CBAF9E3F, 8A1A732A3F826AF8E6CEF73B, 62F5F1FD0DA06322B39EA97D, 129B480C85436E5B200A61C5, 1ACC8BB3167FAA07A77093A5, A3C53A25DAE7A628A520B1AF, 09706FC482D373C548F67DE2, EE9B26014B586EEE9B5A2B55, 3B5DBB30A2642EDB04206508, 1A7A993ACDDB84725ECAA4AE, 696B168D1D04C596CD353DF4, B4174B71E228BD5F33871D32, C9A28DCF6A30A923F3795757, 6FA4084CCA534C512CFEC3F4, FF200703C838D4DF6E011A83, 2174012FADF7FFBBB7EFF444, 2BE81892C0586DAC76E3BADD, 923C554B31A1E44E27D87E09, F6913E933E1CC6DFD60BE64E, C966C402DF3EC7562E2D2453, 86CFA4F59A79424044C62C5F, 46C3DEF06503D06C677911A6, 181659F132975ED7416AA37D, CFBFBC6F4D11C2D281CF09BD, E81C83E1517A893AC7898D89, B47B40B445F4D13D31DFD2AA, E0AF129B1B8ADF7E6821B0A2, 8FDEC447E56D29F5AEA5D19A, F832A10042BE6CE686E0BC75, D0F7DA40C96275E66319A751); path = extensions;};
-9D750FA82C6AC5641CC5B46F = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "_XParameterSet.m";};
-15ABFC96FB765FB9497E1E49 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSFileManager+XTest.m";};
-B47491DEB946BCFFCBB4E0E2 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSDate+X.m";};
-FFDEE33B529D895DF00AD953 = {isa = PBXBuildFile; fileRef = 0EA7838E80D65CAAEEF6FDEA; settings = {ATTRIBUTES = (Public);};};
-399A28825F34FB0D02CB6002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSDictionary+XTest.m";};
-754DCD176DAAE10C349D10AF = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSNull+XTest.m";};
-D464A6A7754E63410FA8D329 = {name = Debug; isa = XCBuildConfiguration; buildSettings = {GCC_WARN_ABOUT_RETURN_TYPE = YES; GCC_OPTIMIZATION_LEVEL = 0; SDKROOT = macosx10.5; PREBINDING = NO; ARCHS = "$(ARCHS_STANDARD_32_BIT)"; GCC_WARN_UNUSED_VARIABLE = YES; HEADER_SEARCH_PATHS = /usr/include/libxml2; GCC_C_LANGUAGE_STANDARD = c99; ONLY_ACTIVE_ARCH = YES;};};
-3D106FEF638730278515E957 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XArrayTest.m";};
-594FFB9BE2C979A6C0A21316 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSDate+XTest.m";};
-21833BD8CEFFE9579CF26763 = {isa = PBXBuildFile; fileRef = 1ACC8BB3167FAA07A77093A5; settings = {ATTRIBUTES = (Public);};};
-6DF8E491DA49180B877A6315 = {isa = PBXBuildFile; fileRef = 399A28825F34FB0D02CB6002; settings = {ATTRIBUTES = (Public);};};
-DB2EF928CAF69D02FFD89F50 = {isa = PBXGroup; sourceTree = "<group>"; children = (A6D8204D27757949503A01CD, 3C62B511565E3EA877DFF9D9, 405FA0A36A261BC00D184C80, 375883F0A7627C496C07B39B, 8983C1F1E24787E2993535EF, 78492B756168E0076943E541, DA1D4A5DEE31934E0EAA3220, 5BFF09D4982B22765D1A1F44, 57F3EF18EA12BF16AA8BE407, F4A77C8EC30A113BE68BD5ED, D0672650DEBFE7A63ECF0C41, 35949EDF3E683F83FF7428ED, 9D8D7E3E38EB288A252A869C, 207AF500A0A089933F14FBE0, 0C7302BB29915B5E3B8E3E1B, 22DE85F487512659CE42F350); path = shared;};
-62F5F1FD0DA06322B39EA97D = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "NSException+X.d";};
-C75DEFC1BF9A47ADA06C6F91 = {name = Foundation.framework; isa = PBXFileReference; lastKnownFileType = wrapper.framework; sourceTree = SDKROOT; path = "System/Library/Frameworks/Security.framework";};
-E7AEC97CF2962940F8B71B49 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "NSMutableArray+XTest.m";};
-92E9CA36C6F7637F303383F7 = {isa = PBXBuildFile; fileRef = 2F92AA3A5E44CFEBF159BE39; settings = {ATTRIBUTES = (Public);};};
-12A11B2C65554769F88B5067 = {isa = PBXFileReference; lastKnownFileType = file; sourceTree = "<group>"; path = "XFileTest_test_file.txt";};
-D0672650DEBFE7A63ECF0C41 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "XAsynchronousTestCase.h";};
-E6FE4DBDE3415F7D5CC1248A = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; sourceTree = "<group>"; fileEncoding = 4; path = "NSDate+X.h";};
-35949EDF3E683F83FF7428ED = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; sourceTree = "<group>"; fileEncoding = 4; path = "XAsynchronousTestCase.m";};};}
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03D1E4268C60178AA0E9DDC8 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B2CC15D04146AD2143261 /* libsqlite3.0.dylib */; settings = {ATTRIBUTES = (Public, ); }; };
+		04F7BF07E1A9C30AEFA6544E /* NSMutableString+X.m in Sources */ = {isa = PBXBuildFile; fileRef = C966C402DF3EC7562E2D2453 /* NSMutableString+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		07029AF6E94FE24C877EBB7C /* XArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D106FEF638730278515E957 /* XArrayTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0782CE14E26D7D5A0BAD7AA2 /* XObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3478CEA19779C1C0A6259A /* XObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D6F744F838A7A22B034575E /* NSArray+X.m in Sources */ = {isa = PBXBuildFile; fileRef = E223DCA661B181AB5A95DDEB /* NSArray+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BCEA01D046F3EFD4901623D /* NSMutableArray+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA4084CCA534C512CFEC3F4 /* NSMutableArray+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BF02B6995B9ED0E588F4452 /* XAsynchronousTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 35949EDF3E683F83FF7428ED /* XAsynchronousTestCase.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E365AB7D1B6DF10E7AAA37C /* NSException+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1EFDDB6ACCFC342C3087C1 /* NSException+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		2066DAB50E9AFB19A6753BBE /* XTrampoline.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C37C9A4AB4DE3C9C2523B5 /* XTrampoline.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21833BD8CEFFE9579CF26763 /* NSException+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC8BB3167FAA07A77093A5 /* NSException+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		2368B98E9296547A73688DAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F736FDE51035C867E708632C /* Foundation.framework */; settings = {ATTRIBUTES = (Public, ); }; };
+		244389287269128F8E7FE505 /* XStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A65FEDA0168DC99915FED3 /* XStringTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		284184D29F16965BBF323232 /* NSObject+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C2DE210D08FC21EEF43F01 /* NSObject+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A90B8FC61FF812E522FCBEA /* XAsyncTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 207AF500A0A089933F14FBE0 /* XAsyncTestHelper.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C7DFFDB8441CA7BBC6637F9 /* XString.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B95FD5D9119282E4606268A /* XString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F2A3596ACBE0FC302313A1C /* XQuadruplet.h in Headers */ = {isa = PBXBuildFile; fileRef = BBA26DA8253BC207FAAEE4F0 /* XQuadruplet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3332D7017B6697D852924603 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ED83B38AE7E97D89064F6B /* libicucore.dylib */; settings = {ATTRIBUTES = (Public, ); }; };
+		3587E554D2E5890065041935 /* Macros.h in Headers */ = {isa = PBXBuildFile; fileRef = AFA6C7872319DF50E58B0C0E /* Macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37E3F0D285B8745354A95DD2 /* NSData+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 43069F11E26D36521A790EE7 /* NSData+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AA29FAF8622E019B9445D91 /* NSMutableArray+X.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A28DCF6A30A923F3795757 /* NSMutableArray+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C49C64ADE385DCE5DC62BD9 /* StubbedMethodMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = 8983C1F1E24787E2993535EF /* StubbedMethodMemento.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ECE2C5FD129A4935A7ED778 /* NSString+X.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F7DA40C96275E66319A751 /* NSString+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EEFA79A4238E99FB4A69CE6 /* NSNumber+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 181659F132975ED7416AA37D /* NSNumber+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F3B64ED7CC939A771D55AA6 /* XTriplet.m in Sources */ = {isa = PBXBuildFile; fileRef = A20535CD765EB90FDD7CCA3E /* XTriplet.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		45B212F6F19FB661BAA75F51 /* NSNull+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 86CFA4F59A79424044C62C5F /* NSNull+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D61AFAF4B0932BD572813C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75DEFC1BF9A47ADA06C6F91 /* Foundation.framework */; settings = {ATTRIBUTES = (Public, ); }; };
+		542A12EA3C41C08A13827693 /* XArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 28341599EB2DFD3940EAFC28 /* XArray.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		5440C5457F1EFA37F334137D /* NSDateFormatter+X.m in Sources */ = {isa = PBXBuildFile; fileRef = FE19D07FD4CE1F489949CBA9 /* NSDateFormatter+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		58F665F658481377253C8393 /* NSObject+X.m in Sources */ = {isa = PBXBuildFile; fileRef = E0AF129B1B8ADF7E6821B0A2 /* NSObject+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		59AD65CFEEC0D5343317738B /* StubbedMethodMementoCollectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 551B5985548507CD8CFDE777 /* StubbedMethodMementoCollectionTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A23C3F27071EB6B1F6AF8F6 /* SampleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 405FA0A36A261BC00D184C80 /* SampleTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B7B90517394A2F2FBEDF758 /* NSDate+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FFB9BE2C979A6C0A21316 /* NSDate+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B7D6852490F852B54524C03 /* NSDate+X.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FE4DBDE3415F7D5CC1248A /* NSDate+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DE8F3DCEC5479B57FC4F0F0 /* XTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 752CA6E291531B46CBC0D79D /* XTrampoline.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E6989651EFF14543F1CD8 /* FrameworkXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513095C96B2AFC43EE5726C2 /* FrameworkXCore.framework */; settings = {ATTRIBUTES = (Public, ); }; };
+		625625D1E32CC75D5F38F716 /* NSNull+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 754DCD176DAAE10C349D10AF /* NSNull+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		62D72CB3E3B8A3BBC8C0BCAD /* Io.h in Headers */ = {isa = PBXBuildFile; fileRef = 78B60CA19255B80D32275B26 /* Io.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B48CF84A191DBC617EBC110 /* NSXMLDocument+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CABE856C0A982C588B3273 /* NSXMLDocument+Test.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DF8E491DA49180B877A6315 /* NSDictionary+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 399A28825F34FB0D02CB6002 /* NSDictionary+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		751ECB42DD15B957C28076B8 /* XTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DE85F487512659CE42F350 /* XTestCase.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		763AD89A23FACBA66D4F3537 /* XQuadruplet.m in Sources */ = {isa = PBXBuildFile; fileRef = C03C35BF1E83EAC4A0AC4E9A /* XQuadruplet.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		78F94739474BB36B848F5460 /* XFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C643F9CBA290F0D9C95DE /* XFile.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		79F5D8C49D78B347CBAC1B44 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF11A15DF99415EE2677433A /* libxml2.2.dylib */; settings = {ATTRIBUTES = (Public, ); }; };
+		7ACB91D5D2CA7386E06740C4 /* NSMutableString+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD2632ABD112441405DF2B /* NSMutableString+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AE432A71DA1A248097715B3 /* StubbedMethodMementoCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D4A5DEE31934E0EAA3220 /* StubbedMethodMementoCollection.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D34341E9D8CC8E863F1A75E /* XFileTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C729FF66BD090963F8C51514 /* XFileTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D661A883764BF7B2E1A2212 /* NSNumber+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AA001C16A83E0A889BCDB8 /* NSNumber+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D8537213B67EA8E3A56DF88 /* _XParameterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D750FA82C6AC5641CC5B46F /* _XParameterSet.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		81AF463B11D31094B570083B /* Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D77BD6CB9242BF126F736D /* Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85873ECE866B7D6FFD449AAA /* XFile.h in Headers */ = {isa = PBXBuildFile; fileRef = B4CE3770E622DC3505865311 /* XFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87DA753F1138F7AAF22242DE /* NSMutableString+X.h in Headers */ = {isa = PBXBuildFile; fileRef = F6913E933E1CC6DFD60BE64E /* NSMutableString+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D46D11FAAA2FB9957159DDA /* NSMutableDictionary+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE81892C0586DAC76E3BADD /* NSMutableDictionary+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		90B18C011DAA3A3FE1EB1E42 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CF47A6745114A0176A8ED2F /* RegexKitLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91DC05A42E96A7A12C5EAE6A /* XDoublet.m in Sources */ = {isa = PBXBuildFile; fileRef = DFEC85CBFC3C43F32EA65D47 /* XDoublet.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		92E9CA36C6F7637F303383F7 /* XMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F92AA3A5E44CFEBF159BE39 /* XMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95100DF608B8823FF3E54927 /* NSFileManager+X.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9B26014B586EEE9B5A2B55 /* NSFileManager+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		97AD0C7E607B5ECCE900E932 /* NSString+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E77C97723095249D42EA8CA1 /* NSString+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		9987E406AD8766901AE73AC8 /* XMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA6429DF374867048A187A /* XMethod.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A63D224A7F50B426192E0F9 /* NSObject+X.h in Headers */ = {isa = PBXBuildFile; fileRef = B47B40B445F4D13D31DFD2AA /* NSObject+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D2EE12FFACDECABE23079A7 /* XMethodTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 130B94BE6134CA6801220758 /* XMethodTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E6784524EEFB3C69F58D9A9 /* NSData+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAB17477BADE39551F371A /* NSData+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F0A50C9C4F14375FC9E0AC2 /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A77C8EC30A113BE68BD5ED /* TestHelper.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		A10B1CD4547B2CCA70C1047E /* StubbedMethodMementoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B708F5C16BD6C87DE042AE /* StubbedMethodMementoTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4AB3294D756AAA1FF82C553 /* XTestCaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D8CB1B76B9472A25B8EFA8 /* XTestCaseTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		A562281A39A57317982778A9 /* NSDateFormatter+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 578575BFB160F0F0BFC250BB /* NSDateFormatter+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A953B9139540302327919794 /* NSInvocation+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE7D37EC5D890A2D5650E81 /* NSInvocation+Additions.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD5094EB6BDFEC54D7160B6E /* NSMutableArray+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AEC97CF2962940F8B71B49 /* NSMutableArray+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1BD97DD4B4CE53CA2F584A2 /* _XParameterSet.h in Headers */ = {isa = PBXBuildFile; fileRef = E591EFA80BEEF8CB97552F39 /* _XParameterSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5474E740BF6BCE50AF977D4 /* NSNumber+X.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBFBC6F4D11C2D281CF09BD /* NSNumber+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		B69E75FAB63C82ED01AFF85A /* NSObject+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F2F2415F44DF4F8AF5FCEE /* NSObject+Test.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8F537A6BBBF5D783F1A311B /* NSDictionary+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A732A3F826AF8E6CEF73B /* NSDictionary+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB3EA12E8C479B6BFE0C4A34 /* XHashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 933A7BD422FABD6AD31AD2E1 /* XHashTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCC27BB3838DB0447EE63D8E /* XObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610080A866B09A2462D072E /* XObject.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		C13DEB52D021719C89BF2669 /* XCore.h in Headers */ = {isa = PBXBuildFile; fileRef = A8ABC83654EB6B3B7B17997A /* XCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C588C9AA02B8CEBB27E2633E /* XArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E0285A26963CD0F6B738A34 /* XArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8C60B5FBF744A1AFD183025 /* NSString+X.h in Headers */ = {isa = PBXBuildFile; fileRef = F832A10042BE6CE686E0BC75 /* NSString+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAB6B7E96CE683D4FFD8C9BE /* NSFileManager+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 09706FC482D373C548F67DE2 /* NSFileManager+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBD10C6A5A40EFB804C60843 /* XHash.m in Sources */ = {isa = PBXBuildFile; fileRef = A624390A1B12B15664520F8D /* XHash.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC13630586229C70DE6B8866 /* NSArray+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 90A73E119A61AB979F08C405 /* NSArray+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE569B1496B2DE7C16C9CC12 /* XDoublet.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B867C1A1BF497676B515F5 /* XDoublet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF7FBB93956B17DCB3F26339 /* XTriplet.h in Headers */ = {isa = PBXBuildFile; fileRef = C57B63FDC8E5B52264B80757 /* XTriplet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D574E7F9DA5E9DDC67D9FA95 /* NSInvocation+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 696B168D1D04C596CD353DF4 /* NSInvocation+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7153D3D2290632D7DE455B4 /* XObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 385428AB6DA92C97FC3196D5 /* XObjectTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD6C837B53FD4D1EB49B51A0 /* NSArray+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C56B3EFFF118F408A640E4 /* NSArray+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD8AD458B65D9E1EA30F9981 /* NSXMLDocument+TestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB1724A044E378C3B190731 /* NSXMLDocument+TestTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0AF550A37C9457F3E25F599 /* NSDictionary+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EB3E7C1D853A15CBAF9E3F /* NSDictionary+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E13E8CAC89A9C9D0BF020131 /* NSDate+X.m in Sources */ = {isa = PBXBuildFile; fileRef = B47491DEB946BCFFCBB4E0E2 /* NSDate+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		E240A8E05BCEE67AA67BF83B /* NSMutableDictionary+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 2174012FADF7FFBBB7EFF444 /* NSMutableDictionary+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC6F6D878C9549412D618CFC /* FrameworkX.h in Headers */ = {isa = PBXBuildFile; fileRef = 169CB428D4E3DF092B4BD39F /* FrameworkX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED4ED795CD7CF9B2986E2A7C /* NSObject+TestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAA1DDB62EB98650BE4FA4A /* NSObject+TestTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		F333D79DBCA4323A2EC9F711 /* XHash.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EF41519E6BE28BF58715C1B /* XHash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3B3C6CA7B1851ADC94FDA4A /* NSFileManager+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ABFC96FB765FB9497E1E49 /* NSFileManager+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		F582438DA5051341DF772EBF /* XString.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5D24F359AEAA801EE6450 /* XString.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		F635C69E8CC9F34BD76DFA98 /* NSInvocation+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A7A993ACDDB84725ECAA4AE /* NSInvocation+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F795ABB51E148DBD0F940847 /* XCore.m in Sources */ = {isa = PBXBuildFile; fileRef = DE20B7BE4798B56BDF507F59 /* XCore.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8841B3A13D48D905568DF58 /* NSException+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 129B480C85436E5B200A61C5 /* NSException+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8CFB55DE235DC8EFF921479 /* NSData+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FE21686F15F8D14FD8934 /* NSData+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		F963F9F4F7EF6D427F43A28C /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 288ED6A4799F27DE41108C54 /* RegexKitLite.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBF1DE15906EB0B4A1B0B777 /* XCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7C3DA9E069021D8D2BC39C /* XCollections.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFDEE33B529D895DF00AD953 /* NSMutableDictionary+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7838E80D65CAAEEF6FDEA /* NSMutableDictionary+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04C37C9A4AB4DE3C9C2523B5 /* XTrampoline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTrampoline.h; sourceTree = "<group>"; };
+		07D77BD6CB9242BF126F736D /* Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Extensions.h; sourceTree = "<group>"; };
+		08C56B3EFFF118F408A640E4 /* NSArray+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XTest.m"; sourceTree = "<group>"; };
+		09706FC482D373C548F67DE2 /* NSFileManager+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+X.h"; sourceTree = "<group>"; };
+		0C7302BB29915B5E3B8E3E1B /* XTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTestCase.h; sourceTree = "<group>"; };
+		0CF47A6745114A0176A8ED2F /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		0E6FE21686F15F8D14FD8934 /* NSData+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+XTest.m"; sourceTree = "<group>"; };
+		0EA7838E80D65CAAEEF6FDEA /* NSMutableDictionary+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+XTest.m"; sourceTree = "<group>"; };
+		129B480C85436E5B200A61C5 /* NSException+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+X.h"; sourceTree = "<group>"; };
+		12A11B2C65554769F88B5067 /* XFileTest_test_file.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = XFileTest_test_file.txt; sourceTree = "<group>"; };
+		130B94BE6134CA6801220758 /* XMethodTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMethodTest.m; sourceTree = "<group>"; };
+		15ABFC96FB765FB9497E1E49 /* NSFileManager+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+XTest.m"; sourceTree = "<group>"; };
+		1610080A866B09A2462D072E /* XObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XObject.m; sourceTree = "<group>"; };
+		169CB428D4E3DF092B4BD39F /* FrameworkX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameworkX.h; sourceTree = "<group>"; };
+		17D05DA33AFFD6EDF1317F4B /* XTrampoline.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = XTrampoline.d; sourceTree = "<group>"; };
+		181659F132975ED7416AA37D /* NSNumber+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+X.h"; sourceTree = "<group>"; };
+		1A7A993ACDDB84725ECAA4AE /* NSInvocation+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+X.h"; sourceTree = "<group>"; };
+		1ACC8BB3167FAA07A77093A5 /* NSException+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+X.m"; sourceTree = "<group>"; };
+		1E0285A26963CD0F6B738A34 /* XArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XArray.h; sourceTree = "<group>"; };
+		207AF500A0A089933F14FBE0 /* XAsyncTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAsyncTestHelper.m; sourceTree = "<group>"; };
+		2174012FADF7FFBBB7EFF444 /* NSMutableDictionary+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+X.h"; sourceTree = "<group>"; };
+		22DE85F487512659CE42F350 /* XTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTestCase.m; sourceTree = "<group>"; };
+		28341599EB2DFD3940EAFC28 /* XArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XArray.m; sourceTree = "<group>"; };
+		288ED6A4799F27DE41108C54 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		28A65FEDA0168DC99915FED3 /* XStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XStringTest.m; sourceTree = "<group>"; };
+		2BE81892C0586DAC76E3BADD /* NSMutableDictionary+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+X.m"; sourceTree = "<group>"; };
+		2E25DAF2539E0841BBEC74B7 /* XString.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = XString.d; sourceTree = "<group>"; };
+		2EAA1DDB62EB98650BE4FA4A /* NSObject+TestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TestTest.m"; sourceTree = "<group>"; };
+		2EF41519E6BE28BF58715C1B /* XHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHash.h; sourceTree = "<group>"; };
+		2F92AA3A5E44CFEBF159BE39 /* XMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMethod.h; sourceTree = "<group>"; };
+		2FBD2632ABD112441405DF2B /* NSMutableString+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+XTest.m"; sourceTree = "<group>"; };
+		34F2F2415F44DF4F8AF5FCEE /* NSObject+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Test.m"; sourceTree = "<group>"; };
+		35949EDF3E683F83FF7428ED /* XAsynchronousTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAsynchronousTestCase.m; sourceTree = "<group>"; };
+		375883F0A7627C496C07B39B /* StubbedMethodMemento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubbedMethodMemento.h; sourceTree = "<group>"; };
+		385428AB6DA92C97FC3196D5 /* XObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XObjectTest.m; sourceTree = "<group>"; };
+		38D8CB1B76B9472A25B8EFA8 /* XTestCaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTestCaseTest.m; sourceTree = "<group>"; };
+		399A28825F34FB0D02CB6002 /* NSDictionary+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XTest.m"; sourceTree = "<group>"; };
+		3AEA6429DF374867048A187A /* XMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMethod.m; sourceTree = "<group>"; };
+		3B5DBB30A2642EDB04206508 /* NSInvocation+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSInvocation+X.d"; sourceTree = "<group>"; };
+		3C62B511565E3EA877DFF9D9 /* Infrastructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
+		3D106FEF638730278515E957 /* XArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XArrayTest.m; sourceTree = "<group>"; };
+		405FA0A36A261BC00D184C80 /* SampleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTest.m; sourceTree = "<group>"; };
+		43069F11E26D36521A790EE7 /* NSData+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+X.h"; sourceTree = "<group>"; };
+		46C3DEF06503D06C677911A6 /* NSNumber+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSNumber+X.d"; sourceTree = "<group>"; };
+		513095C96B2AFC43EE5726C2 /* FrameworkXCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FrameworkXCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		551B5985548507CD8CFDE777 /* StubbedMethodMementoCollectionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubbedMethodMementoCollectionTest.m; sourceTree = "<group>"; };
+		578575BFB160F0F0BFC250BB /* NSDateFormatter+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+X.h"; sourceTree = "<group>"; };
+		57F3EF18EA12BF16AA8BE407 /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
+		594FFB9BE2C979A6C0A21316 /* NSDate+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XTest.m"; sourceTree = "<group>"; };
+		62F5F1FD0DA06322B39EA97D /* NSException+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSException+X.d"; sourceTree = "<group>"; };
+		62F8A29EF5D6CA067BD2C502 /* TestFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestFile.plist; sourceTree = "<group>"; };
+		6353A8D07AC20DB05FD2A9EF /* XArray.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = XArray.d; sourceTree = "<group>"; };
+		653C6DEDF5B335237E263325 /* test_file.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test_file.txt; sourceTree = "<group>"; };
+		696B168D1D04C596CD353DF4 /* NSInvocation+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+X.m"; sourceTree = "<group>"; };
+		6B95FD5D9119282E4606268A /* XString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XString.h; sourceTree = "<group>"; };
+		6FA4084CCA534C512CFEC3F4 /* NSMutableArray+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+X.m"; sourceTree = "<group>"; };
+		716DC92BF0AC304D06DABAE2 /* XMethod.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = XMethod.d; sourceTree = "<group>"; };
+		736DD44D55593E8B23DA1C47 /* NSDate+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSDate+X.d"; sourceTree = "<group>"; };
+		73ED83B38AE7E97D89064F6B /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		752CA6E291531B46CBC0D79D /* XTrampoline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTrampoline.m; sourceTree = "<group>"; };
+		754DCD176DAAE10C349D10AF /* NSNull+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+XTest.m"; sourceTree = "<group>"; };
+		78492B756168E0076943E541 /* StubbedMethodMementoCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubbedMethodMementoCollection.h; sourceTree = "<group>"; };
+		78B60CA19255B80D32275B26 /* Io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Io.h; sourceTree = "<group>"; };
+		79B867C1A1BF497676B515F5 /* XDoublet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDoublet.h; sourceTree = "<group>"; };
+		81EB3E7C1D853A15CBAF9E3F /* NSDictionary+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+X.h"; sourceTree = "<group>"; };
+		86CFA4F59A79424044C62C5F /* NSNull+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+X.h"; sourceTree = "<group>"; };
+		8983C1F1E24787E2993535EF /* StubbedMethodMemento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubbedMethodMemento.m; sourceTree = "<group>"; };
+		89C4DB45936DB27CD661633D /* XQuadruplet.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = XQuadruplet.d; sourceTree = "<group>"; };
+		8A1A732A3F826AF8E6CEF73B /* NSDictionary+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+X.m"; sourceTree = "<group>"; };
+		8CADE8B7E3F1C05CDD38F89E /* test_file.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test_file.txt; sourceTree = "<group>"; };
+		8F6C643F9CBA290F0D9C95DE /* XFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFile.m; sourceTree = "<group>"; };
+		8FB0B5E0589B072738791038 /* TestFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestFile.plist; sourceTree = "<group>"; };
+		8FDEC447E56D29F5AEA5D19A /* NSString+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSString+X.d"; sourceTree = "<group>"; };
+		90A73E119A61AB979F08C405 /* NSArray+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+X.h"; sourceTree = "<group>"; };
+		923C554B31A1E44E27D87E09 /* NSMutableString+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSMutableString+X.d"; sourceTree = "<group>"; };
+		933A7BD422FABD6AD31AD2E1 /* XHashTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHashTest.m; sourceTree = "<group>"; };
+		933F48C183C38FF863921A12 /* XObject.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = XObject.d; sourceTree = "<group>"; };
+		94DF929E192A2998DC3B1CDD /* XFile.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = XFile.d; sourceTree = "<group>"; };
+		95CABE856C0A982C588B3273 /* NSXMLDocument+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLDocument+Test.m"; sourceTree = "<group>"; };
+		9BFAB17477BADE39551F371A /* NSData+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+X.m"; sourceTree = "<group>"; };
+		9D750FA82C6AC5641CC5B46F /* _XParameterSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _XParameterSet.m; sourceTree = "<group>"; };
+		9D8D7E3E38EB288A252A869C /* XAsyncTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAsyncTestHelper.h; sourceTree = "<group>"; };
+		A20535CD765EB90FDD7CCA3E /* XTriplet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTriplet.m; sourceTree = "<group>"; };
+		A3C53A25DAE7A628A520B1AF /* NSFileManager+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSFileManager+X.d"; sourceTree = "<group>"; };
+		A624390A1B12B15664520F8D /* XHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHash.m; sourceTree = "<group>"; };
+		A8ABC83654EB6B3B7B17997A /* XCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCore.h; sourceTree = "<group>"; };
+		AA7F7F619CE71E5C1A0636CF /* NSArray+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSArray+X.d"; sourceTree = "<group>"; };
+		AFA6C7872319DF50E58B0C0E /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		B4174B71E228BD5F33871D32 /* NSMutableArray+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSMutableArray+X.d"; sourceTree = "<group>"; };
+		B47491DEB946BCFFCBB4E0E2 /* NSDate+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+X.m"; sourceTree = "<group>"; };
+		B47B40B445F4D13D31DFD2AA /* NSObject+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+X.h"; sourceTree = "<group>"; };
+		B4CE3770E622DC3505865311 /* XFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFile.h; sourceTree = "<group>"; };
+		B6DA2B962A9AA287BA7D457D /* NSInvocation+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Additions.h"; sourceTree = "<group>"; };
+		B84B2CC15D04146AD2143261 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = /usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		B8EA36D46EAFCBD0C67135F3 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA9D6FE7E81B99E2F6861F4F /* NSDictionary+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSDictionary+X.d"; sourceTree = "<group>"; };
+		BBA26DA8253BC207FAAEE4F0 /* XQuadruplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQuadruplet.h; sourceTree = "<group>"; };
+		BC2CE82C994B280EF9AE7BA4 /* XDoublet.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = XDoublet.d; sourceTree = "<group>"; };
+		BEE7D37EC5D890A2D5650E81 /* NSInvocation+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Additions.m"; sourceTree = "<group>"; };
+		BF1EFDDB6ACCFC342C3087C1 /* NSException+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+XTest.m"; sourceTree = "<group>"; };
+		C03C35BF1E83EAC4A0AC4E9A /* XQuadruplet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQuadruplet.m; sourceTree = "<group>"; };
+		C2235777809FFA41B5A45771 /* TestMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMacros.h; sourceTree = "<group>"; };
+		C3C2DE210D08FC21EEF43F01 /* NSObject+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XTest.m"; sourceTree = "<group>"; };
+		C57B63FDC8E5B52264B80757 /* XTriplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTriplet.h; sourceTree = "<group>"; };
+		C729FF66BD090963F8C51514 /* XFileTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFileTest.m; sourceTree = "<group>"; };
+		C75DEFC1BF9A47ADA06C6F91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C966C402DF3EC7562E2D2453 /* NSMutableString+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+X.m"; sourceTree = "<group>"; };
+		C9A28DCF6A30A923F3795757 /* NSMutableArray+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+X.h"; sourceTree = "<group>"; };
+		CEB1724A044E378C3B190731 /* NSXMLDocument+TestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLDocument+TestTest.m"; sourceTree = "<group>"; };
+		CF11A15DF99415EE2677433A /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		CFBFBC6F4D11C2D281CF09BD /* NSNumber+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+X.m"; sourceTree = "<group>"; };
+		D0672650DEBFE7A63ECF0C41 /* XAsynchronousTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAsynchronousTestCase.h; sourceTree = "<group>"; };
+		D0F7DA40C96275E66319A751 /* NSString+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+X.m"; sourceTree = "<group>"; };
+		D5A994AE7D56C320DC29D35F /* NSDateFormatter+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSDateFormatter+X.d"; sourceTree = "<group>"; };
+		D5BA2EF13762D32E6347F25C /* OCMock+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCMock+Extension.h"; sourceTree = "<group>"; };
+		D6AA001C16A83E0A889BCDB8 /* NSNumber+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+XTest.m"; sourceTree = "<group>"; };
+		DA1D4A5DEE31934E0EAA3220 /* StubbedMethodMementoCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubbedMethodMementoCollection.m; sourceTree = "<group>"; };
+		DA3478CEA19779C1C0A6259A /* XObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XObject.h; sourceTree = "<group>"; };
+		DB55B3A2EBD21CC14184DD3B /* NSObject+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Test.h"; sourceTree = "<group>"; };
+		DE20B7BE4798B56BDF507F59 /* XCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCore.m; sourceTree = "<group>"; };
+		DFEC85CBFC3C43F32EA65D47 /* XDoublet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDoublet.m; sourceTree = "<group>"; };
+		E0AF129B1B8ADF7E6821B0A2 /* NSObject+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+X.m"; sourceTree = "<group>"; };
+		E18159059C09DF7B50095E0E /* XHash.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = XHash.d; sourceTree = "<group>"; };
+		E223DCA661B181AB5A95DDEB /* NSArray+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+X.m"; sourceTree = "<group>"; };
+		E591EFA80BEEF8CB97552F39 /* _XParameterSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XParameterSet.h; sourceTree = "<group>"; };
+		E5B708F5C16BD6C87DE042AE /* StubbedMethodMementoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubbedMethodMementoTest.m; sourceTree = "<group>"; };
+		E6FE4DBDE3415F7D5CC1248A /* NSDate+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+X.h"; sourceTree = "<group>"; };
+		E77C97723095249D42EA8CA1 /* NSString+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XTest.m"; sourceTree = "<group>"; };
+		E7AEC97CF2962940F8B71B49 /* NSMutableArray+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+XTest.m"; sourceTree = "<group>"; };
+		E81C83E1517A893AC7898D89 /* NSObject+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSObject+X.d"; sourceTree = "<group>"; };
+		EE9B26014B586EEE9B5A2B55 /* NSFileManager+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+X.m"; sourceTree = "<group>"; };
+		EF7C3DA9E069021D8D2BC39C /* XCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCollections.h; sourceTree = "<group>"; };
+		EFDBFB7C01C256305F2EE569 /* NSXMLDocument+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXMLDocument+Test.h"; sourceTree = "<group>"; };
+		EFF5D24F359AEAA801EE6450 /* XString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XString.m; sourceTree = "<group>"; };
+		F3E953220572BEB1E3ABD11C /* NSData+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSData+X.d"; sourceTree = "<group>"; };
+		F4A77C8EC30A113BE68BD5ED /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
+		F6913E933E1CC6DFD60BE64E /* NSMutableString+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+X.h"; sourceTree = "<group>"; };
+		F736FDE51035C867E708632C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F832A10042BE6CE686E0BC75 /* NSString+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+X.h"; sourceTree = "<group>"; };
+		F915B06A20B869936FB4CD19 /* XTriplet.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = XTriplet.d; sourceTree = "<group>"; };
+		FE19D07FD4CE1F489949CBA9 /* NSDateFormatter+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+X.m"; sourceTree = "<group>"; };
+		FF200703C838D4DF6E011A83 /* NSMutableDictionary+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSMutableDictionary+X.d"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2451AC86F5B4D3C4EF5DA91C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2368B98E9296547A73688DAF /* Foundation.framework in Frameworks */,
+				03D1E4268C60178AA0E9DDC8 /* libsqlite3.0.dylib in Frameworks */,
+				3332D7017B6697D852924603 /* libicucore.dylib in Frameworks */,
+				79F5D8C49D78B347CBAC1B44 /* libxml2.2.dylib in Frameworks */,
+				4D61AFAF4B0932BD572813C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA6EB883E13935730B4577F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				623E6989651EFF14543F1CD8 /* FrameworkXCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		284A0CCB350826DA8BAE184F /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				8CF53CC8FF77FF96E3E732C1 /* Frameworks */,
+				6EE6F5BE98D28C391D750401 /* Products */,
+				9D56B793D88FF50F6585985F /* source */,
+				2ADF8CFE300980D752211C67 /* test */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		2ADF8CFE300980D752211C67 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				52CACA380D6BA31455546854 /* collections */,
+				2BD8A65F7C6E20082A2E1105 /* extensions */,
+				E73C5634147B2313492090F1 /* infrastructure */,
+				EEFBFF2C74E608673D85A6DA /* io */,
+				8CADE8B7E3F1C05CDD38F89E /* test_file.txt */,
+				130B94BE6134CA6801220758 /* XMethodTest.m */,
+				385428AB6DA92C97FC3196D5 /* XObjectTest.m */,
+				28A65FEDA0168DC99915FED3 /* XStringTest.m */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		2BD8A65F7C6E20082A2E1105 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08C56B3EFFF118F408A640E4 /* NSArray+XTest.m */,
+				0E6FE21686F15F8D14FD8934 /* NSData+XTest.m */,
+				594FFB9BE2C979A6C0A21316 /* NSDate+XTest.m */,
+				399A28825F34FB0D02CB6002 /* NSDictionary+XTest.m */,
+				BF1EFDDB6ACCFC342C3087C1 /* NSException+XTest.m */,
+				15ABFC96FB765FB9497E1E49 /* NSFileManager+XTest.m */,
+				E7AEC97CF2962940F8B71B49 /* NSMutableArray+XTest.m */,
+				0EA7838E80D65CAAEEF6FDEA /* NSMutableDictionary+XTest.m */,
+				2FBD2632ABD112441405DF2B /* NSMutableString+XTest.m */,
+				754DCD176DAAE10C349D10AF /* NSNull+XTest.m */,
+				D6AA001C16A83E0A889BCDB8 /* NSNumber+XTest.m */,
+				C3C2DE210D08FC21EEF43F01 /* NSObject+XTest.m */,
+				E77C97723095249D42EA8CA1 /* NSString+XTest.m */,
+				8FB0B5E0589B072738791038 /* TestFile.plist */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		3B5B9BB40EC81EF2B23B514C /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA2EF13762D32E6347F25C /* OCMock+Extension.h */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		52CACA380D6BA31455546854 /* collections */ = {
+			isa = PBXGroup;
+			children = (
+				62F8A29EF5D6CA067BD2C502 /* TestFile.plist */,
+				3D106FEF638730278515E957 /* XArrayTest.m */,
+				933A7BD422FABD6AD31AD2E1 /* XHashTest.m */,
+			);
+			path = collections;
+			sourceTree = "<group>";
+		};
+		56BB247E7EF160C4ECC2E78D /* io */ = {
+			isa = PBXGroup;
+			children = (
+				78B60CA19255B80D32275B26 /* Io.h */,
+				94DF929E192A2998DC3B1CDD /* XFile.d */,
+				B4CE3770E622DC3505865311 /* XFile.h */,
+				8F6C643F9CBA290F0D9C95DE /* XFile.m */,
+			);
+			path = io;
+			sourceTree = "<group>";
+		};
+		5BFF09D4982B22765D1A1F44 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				F7DBAC380329DF2DD7D22CA1 /* extensions */,
+				551B5985548507CD8CFDE777 /* StubbedMethodMementoCollectionTest.m */,
+				E5B708F5C16BD6C87DE042AE /* StubbedMethodMementoTest.m */,
+				C2235777809FFA41B5A45771 /* TestMacros.h */,
+				38D8CB1B76B9472A25B8EFA8 /* XTestCaseTest.m */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		5FDDCFD8AA29EFE5E8C21829 /* reg_ex */ = {
+			isa = PBXGroup;
+			children = (
+				0CF47A6745114A0176A8ED2F /* RegexKitLite.h */,
+				288ED6A4799F27DE41108C54 /* RegexKitLite.m */,
+			);
+			path = reg_ex;
+			sourceTree = "<group>";
+		};
+		6EE6F5BE98D28C391D750401 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				513095C96B2AFC43EE5726C2 /* FrameworkXCore.framework */,
+				B8EA36D46EAFCBD0C67135F3 /* UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70CE12697B6752B9AFE1374D /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E591EFA80BEEF8CB97552F39 /* _XParameterSet.h */,
+				9D750FA82C6AC5641CC5B46F /* _XParameterSet.m */,
+				07D77BD6CB9242BF126F736D /* Extensions.h */,
+				AA7F7F619CE71E5C1A0636CF /* NSArray+X.d */,
+				90A73E119A61AB979F08C405 /* NSArray+X.h */,
+				E223DCA661B181AB5A95DDEB /* NSArray+X.m */,
+				F3E953220572BEB1E3ABD11C /* NSData+X.d */,
+				43069F11E26D36521A790EE7 /* NSData+X.h */,
+				9BFAB17477BADE39551F371A /* NSData+X.m */,
+				736DD44D55593E8B23DA1C47 /* NSDate+X.d */,
+				E6FE4DBDE3415F7D5CC1248A /* NSDate+X.h */,
+				B47491DEB946BCFFCBB4E0E2 /* NSDate+X.m */,
+				D5A994AE7D56C320DC29D35F /* NSDateFormatter+X.d */,
+				578575BFB160F0F0BFC250BB /* NSDateFormatter+X.h */,
+				FE19D07FD4CE1F489949CBA9 /* NSDateFormatter+X.m */,
+				BA9D6FE7E81B99E2F6861F4F /* NSDictionary+X.d */,
+				81EB3E7C1D853A15CBAF9E3F /* NSDictionary+X.h */,
+				8A1A732A3F826AF8E6CEF73B /* NSDictionary+X.m */,
+				62F5F1FD0DA06322B39EA97D /* NSException+X.d */,
+				129B480C85436E5B200A61C5 /* NSException+X.h */,
+				1ACC8BB3167FAA07A77093A5 /* NSException+X.m */,
+				A3C53A25DAE7A628A520B1AF /* NSFileManager+X.d */,
+				09706FC482D373C548F67DE2 /* NSFileManager+X.h */,
+				EE9B26014B586EEE9B5A2B55 /* NSFileManager+X.m */,
+				3B5DBB30A2642EDB04206508 /* NSInvocation+X.d */,
+				1A7A993ACDDB84725ECAA4AE /* NSInvocation+X.h */,
+				696B168D1D04C596CD353DF4 /* NSInvocation+X.m */,
+				B4174B71E228BD5F33871D32 /* NSMutableArray+X.d */,
+				C9A28DCF6A30A923F3795757 /* NSMutableArray+X.h */,
+				6FA4084CCA534C512CFEC3F4 /* NSMutableArray+X.m */,
+				FF200703C838D4DF6E011A83 /* NSMutableDictionary+X.d */,
+				2174012FADF7FFBBB7EFF444 /* NSMutableDictionary+X.h */,
+				2BE81892C0586DAC76E3BADD /* NSMutableDictionary+X.m */,
+				923C554B31A1E44E27D87E09 /* NSMutableString+X.d */,
+				F6913E933E1CC6DFD60BE64E /* NSMutableString+X.h */,
+				C966C402DF3EC7562E2D2453 /* NSMutableString+X.m */,
+				86CFA4F59A79424044C62C5F /* NSNull+X.h */,
+				46C3DEF06503D06C677911A6 /* NSNumber+X.d */,
+				181659F132975ED7416AA37D /* NSNumber+X.h */,
+				CFBFBC6F4D11C2D281CF09BD /* NSNumber+X.m */,
+				E81C83E1517A893AC7898D89 /* NSObject+X.d */,
+				B47B40B445F4D13D31DFD2AA /* NSObject+X.h */,
+				E0AF129B1B8ADF7E6821B0A2 /* NSObject+X.m */,
+				8FDEC447E56D29F5AEA5D19A /* NSString+X.d */,
+				F832A10042BE6CE686E0BC75 /* NSString+X.h */,
+				D0F7DA40C96275E66319A751 /* NSString+X.m */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		8CF53CC8FF77FF96E3E732C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9DF888D41E149897B0E39B2 /* Linked Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D56B793D88FF50F6585985F /* source */ = {
+			isa = PBXGroup;
+			children = (
+				B344656AF99F4A3DF8C388AA /* collections */,
+				70CE12697B6752B9AFE1374D /* extensions */,
+				169CB428D4E3DF092B4BD39F /* FrameworkX.h */,
+				56BB247E7EF160C4ECC2E78D /* io */,
+				AFA6C7872319DF50E58B0C0E /* Macros.h */,
+				5FDDCFD8AA29EFE5E8C21829 /* reg_ex */,
+				A8ABC83654EB6B3B7B17997A /* XCore.h */,
+				DE20B7BE4798B56BDF507F59 /* XCore.m */,
+				BC2CE82C994B280EF9AE7BA4 /* XDoublet.d */,
+				79B867C1A1BF497676B515F5 /* XDoublet.h */,
+				DFEC85CBFC3C43F32EA65D47 /* XDoublet.m */,
+				716DC92BF0AC304D06DABAE2 /* XMethod.d */,
+				2F92AA3A5E44CFEBF159BE39 /* XMethod.h */,
+				3AEA6429DF374867048A187A /* XMethod.m */,
+				933F48C183C38FF863921A12 /* XObject.d */,
+				DA3478CEA19779C1C0A6259A /* XObject.h */,
+				1610080A866B09A2462D072E /* XObject.m */,
+				89C4DB45936DB27CD661633D /* XQuadruplet.d */,
+				BBA26DA8253BC207FAAEE4F0 /* XQuadruplet.h */,
+				C03C35BF1E83EAC4A0AC4E9A /* XQuadruplet.m */,
+				2E25DAF2539E0841BBEC74B7 /* XString.d */,
+				6B95FD5D9119282E4606268A /* XString.h */,
+				EFF5D24F359AEAA801EE6450 /* XString.m */,
+				17D05DA33AFFD6EDF1317F4B /* XTrampoline.d */,
+				04C37C9A4AB4DE3C9C2523B5 /* XTrampoline.h */,
+				752CA6E291531B46CBC0D79D /* XTrampoline.m */,
+				F915B06A20B869936FB4CD19 /* XTriplet.d */,
+				C57B63FDC8E5B52264B80757 /* XTriplet.h */,
+				A20535CD765EB90FDD7CCA3E /* XTriplet.m */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		A6D8204D27757949503A01CD /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B9BB40EC81EF2B23B514C /* frameworks */,
+				B6DA2B962A9AA287BA7D457D /* NSInvocation+Additions.h */,
+				BEE7D37EC5D890A2D5650E81 /* NSInvocation+Additions.m */,
+				DB55B3A2EBD21CC14184DD3B /* NSObject+Test.h */,
+				34F2F2415F44DF4F8AF5FCEE /* NSObject+Test.m */,
+				EFDBFB7C01C256305F2EE569 /* NSXMLDocument+Test.h */,
+				95CABE856C0A982C588B3273 /* NSXMLDocument+Test.m */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		B344656AF99F4A3DF8C388AA /* collections */ = {
+			isa = PBXGroup;
+			children = (
+				6353A8D07AC20DB05FD2A9EF /* XArray.d */,
+				1E0285A26963CD0F6B738A34 /* XArray.h */,
+				28341599EB2DFD3940EAFC28 /* XArray.m */,
+				EF7C3DA9E069021D8D2BC39C /* XCollections.h */,
+				E18159059C09DF7B50095E0E /* XHash.d */,
+				2EF41519E6BE28BF58715C1B /* XHash.h */,
+				A624390A1B12B15664520F8D /* XHash.m */,
+			);
+			path = collections;
+			sourceTree = "<group>";
+		};
+		D9DF888D41E149897B0E39B2 /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F736FDE51035C867E708632C /* Foundation.framework */,
+				B84B2CC15D04146AD2143261 /* libsqlite3.0.dylib */,
+				73ED83B38AE7E97D89064F6B /* libicucore.dylib */,
+				CF11A15DF99415EE2677433A /* libxml2.2.dylib */,
+				C75DEFC1BF9A47ADA06C6F91 /* Foundation.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		DB2EF928CAF69D02FFD89F50 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				A6D8204D27757949503A01CD /* extensions */,
+				3C62B511565E3EA877DFF9D9 /* Infrastructure.h */,
+				405FA0A36A261BC00D184C80 /* SampleTest.m */,
+				375883F0A7627C496C07B39B /* StubbedMethodMemento.h */,
+				8983C1F1E24787E2993535EF /* StubbedMethodMemento.m */,
+				78492B756168E0076943E541 /* StubbedMethodMementoCollection.h */,
+				DA1D4A5DEE31934E0EAA3220 /* StubbedMethodMementoCollection.m */,
+				5BFF09D4982B22765D1A1F44 /* test */,
+				57F3EF18EA12BF16AA8BE407 /* TestHelper.h */,
+				F4A77C8EC30A113BE68BD5ED /* TestHelper.m */,
+				D0672650DEBFE7A63ECF0C41 /* XAsynchronousTestCase.h */,
+				35949EDF3E683F83FF7428ED /* XAsynchronousTestCase.m */,
+				9D8D7E3E38EB288A252A869C /* XAsyncTestHelper.h */,
+				207AF500A0A089933F14FBE0 /* XAsyncTestHelper.m */,
+				0C7302BB29915B5E3B8E3E1B /* XTestCase.h */,
+				22DE85F487512659CE42F350 /* XTestCase.m */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
+		E73C5634147B2313492090F1 /* infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				DB2EF928CAF69D02FFD89F50 /* shared */,
+			);
+			path = infrastructure;
+			sourceTree = "<group>";
+		};
+		EEFBFF2C74E608673D85A6DA /* io */ = {
+			isa = PBXGroup;
+			children = (
+				653C6DEDF5B335237E263325 /* test_file.txt */,
+				C729FF66BD090963F8C51514 /* XFileTest.m */,
+				12A11B2C65554769F88B5067 /* XFileTest_test_file.txt */,
+			);
+			path = io;
+			sourceTree = "<group>";
+		};
+		F7DBAC380329DF2DD7D22CA1 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2EAA1DDB62EB98650BE4FA4A /* NSObject+TestTest.m */,
+				CEB1724A044E378C3B190731 /* NSXMLDocument+TestTest.m */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0569AA17B7C5A17D2063BFD5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C588C9AA02B8CEBB27E2633E /* XArray.h in Headers */,
+				FBF1DE15906EB0B4A1B0B777 /* XCollections.h in Headers */,
+				F333D79DBCA4323A2EC9F711 /* XHash.h in Headers */,
+				B1BD97DD4B4CE53CA2F584A2 /* _XParameterSet.h in Headers */,
+				81AF463B11D31094B570083B /* Extensions.h in Headers */,
+				CC13630586229C70DE6B8866 /* NSArray+X.h in Headers */,
+				37E3F0D285B8745354A95DD2 /* NSData+X.h in Headers */,
+				5B7D6852490F852B54524C03 /* NSDate+X.h in Headers */,
+				A562281A39A57317982778A9 /* NSDateFormatter+X.h in Headers */,
+				E0AF550A37C9457F3E25F599 /* NSDictionary+X.h in Headers */,
+				F8841B3A13D48D905568DF58 /* NSException+X.h in Headers */,
+				CAB6B7E96CE683D4FFD8C9BE /* NSFileManager+X.h in Headers */,
+				F635C69E8CC9F34BD76DFA98 /* NSInvocation+X.h in Headers */,
+				3AA29FAF8622E019B9445D91 /* NSMutableArray+X.h in Headers */,
+				E240A8E05BCEE67AA67BF83B /* NSMutableDictionary+X.h in Headers */,
+				87DA753F1138F7AAF22242DE /* NSMutableString+X.h in Headers */,
+				45B212F6F19FB661BAA75F51 /* NSNull+X.h in Headers */,
+				3EEFA79A4238E99FB4A69CE6 /* NSNumber+X.h in Headers */,
+				9A63D224A7F50B426192E0F9 /* NSObject+X.h in Headers */,
+				C8C60B5FBF744A1AFD183025 /* NSString+X.h in Headers */,
+				EC6F6D878C9549412D618CFC /* FrameworkX.h in Headers */,
+				62D72CB3E3B8A3BBC8C0BCAD /* Io.h in Headers */,
+				85873ECE866B7D6FFD449AAA /* XFile.h in Headers */,
+				3587E554D2E5890065041935 /* Macros.h in Headers */,
+				90B18C011DAA3A3FE1EB1E42 /* RegexKitLite.h in Headers */,
+				C13DEB52D021719C89BF2669 /* XCore.h in Headers */,
+				CE569B1496B2DE7C16C9CC12 /* XDoublet.h in Headers */,
+				92E9CA36C6F7637F303383F7 /* XMethod.h in Headers */,
+				0782CE14E26D7D5A0BAD7AA2 /* XObject.h in Headers */,
+				2F2A3596ACBE0FC302313A1C /* XQuadruplet.h in Headers */,
+				2C7DFFDB8441CA7BBC6637F9 /* XString.h in Headers */,
+				2066DAB50E9AFB19A6753BBE /* XTrampoline.h in Headers */,
+				CF7FBB93956B17DCB3F26339 /* XTriplet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1A8485F930F9532376A3D7D5 /* FrameworkXCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 918737E18458658A53F2F079 /* Build configuration list for PBXNativeTarget "FrameworkXCore" */;
+			buildPhases = (
+				9CEA1BA5C3C88629A28521E7 /* Sources */,
+				AEF8206226892580EC85523B /* Resources */,
+				2451AC86F5B4D3C4EF5DA91C /* Frameworks */,
+				0569AA17B7C5A17D2063BFD5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FrameworkXCore;
+			productName = FrameworkXCore;
+			productReference = 513095C96B2AFC43EE5726C2 /* FrameworkXCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B498C42955F439E7282E486E /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A40AB0EDC65CC8F439A3D561 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				59005A3D94FE0122F981876B /* Sources */,
+				DA6EB883E13935730B4577F2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = B8EA36D46EAFCBD0C67135F3 /* UnitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4883CBF3F1436263D7B0E078 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = A80DCC5BA26007B19EBC6EA9 /* Build configuration list for PBXProject "FrameworkXCore" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 0;
+			mainGroup = 284A0CCB350826DA8BAE184F /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A8485F930F9532376A3D7D5 /* FrameworkXCore */,
+				B498C42955F439E7282E486E /* UnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEF8206226892580EC85523B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59005A3D94FE0122F981876B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07029AF6E94FE24C877EBB7C /* XArrayTest.m in Sources */,
+				BB3EA12E8C479B6BFE0C4A34 /* XHashTest.m in Sources */,
+				DD6C837B53FD4D1EB49B51A0 /* NSArray+XTest.m in Sources */,
+				F8CFB55DE235DC8EFF921479 /* NSData+XTest.m in Sources */,
+				5B7B90517394A2F2FBEDF758 /* NSDate+XTest.m in Sources */,
+				6DF8E491DA49180B877A6315 /* NSDictionary+XTest.m in Sources */,
+				1E365AB7D1B6DF10E7AAA37C /* NSException+XTest.m in Sources */,
+				F3B3C6CA7B1851ADC94FDA4A /* NSFileManager+XTest.m in Sources */,
+				AD5094EB6BDFEC54D7160B6E /* NSMutableArray+XTest.m in Sources */,
+				FFDEE33B529D895DF00AD953 /* NSMutableDictionary+XTest.m in Sources */,
+				7ACB91D5D2CA7386E06740C4 /* NSMutableString+XTest.m in Sources */,
+				625625D1E32CC75D5F38F716 /* NSNull+XTest.m in Sources */,
+				7D661A883764BF7B2E1A2212 /* NSNumber+XTest.m in Sources */,
+				284184D29F16965BBF323232 /* NSObject+XTest.m in Sources */,
+				97AD0C7E607B5ECCE900E932 /* NSString+XTest.m in Sources */,
+				A953B9139540302327919794 /* NSInvocation+Additions.m in Sources */,
+				B69E75FAB63C82ED01AFF85A /* NSObject+Test.m in Sources */,
+				6B48CF84A191DBC617EBC110 /* NSXMLDocument+Test.m in Sources */,
+				5A23C3F27071EB6B1F6AF8F6 /* SampleTest.m in Sources */,
+				3C49C64ADE385DCE5DC62BD9 /* StubbedMethodMemento.m in Sources */,
+				7AE432A71DA1A248097715B3 /* StubbedMethodMementoCollection.m in Sources */,
+				ED4ED795CD7CF9B2986E2A7C /* NSObject+TestTest.m in Sources */,
+				DD8AD458B65D9E1EA30F9981 /* NSXMLDocument+TestTest.m in Sources */,
+				59AD65CFEEC0D5343317738B /* StubbedMethodMementoCollectionTest.m in Sources */,
+				A10B1CD4547B2CCA70C1047E /* StubbedMethodMementoTest.m in Sources */,
+				A4AB3294D756AAA1FF82C553 /* XTestCaseTest.m in Sources */,
+				9F0A50C9C4F14375FC9E0AC2 /* TestHelper.m in Sources */,
+				1BF02B6995B9ED0E588F4452 /* XAsynchronousTestCase.m in Sources */,
+				2A90B8FC61FF812E522FCBEA /* XAsyncTestHelper.m in Sources */,
+				751ECB42DD15B957C28076B8 /* XTestCase.m in Sources */,
+				7D34341E9D8CC8E863F1A75E /* XFileTest.m in Sources */,
+				9D2EE12FFACDECABE23079A7 /* XMethodTest.m in Sources */,
+				D7153D3D2290632D7DE455B4 /* XObjectTest.m in Sources */,
+				244389287269128F8E7FE505 /* XStringTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CEA1BA5C3C88629A28521E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542A12EA3C41C08A13827693 /* XArray.m in Sources */,
+				CBD10C6A5A40EFB804C60843 /* XHash.m in Sources */,
+				7D8537213B67EA8E3A56DF88 /* _XParameterSet.m in Sources */,
+				0D6F744F838A7A22B034575E /* NSArray+X.m in Sources */,
+				9E6784524EEFB3C69F58D9A9 /* NSData+X.m in Sources */,
+				E13E8CAC89A9C9D0BF020131 /* NSDate+X.m in Sources */,
+				5440C5457F1EFA37F334137D /* NSDateFormatter+X.m in Sources */,
+				B8F537A6BBBF5D783F1A311B /* NSDictionary+X.m in Sources */,
+				21833BD8CEFFE9579CF26763 /* NSException+X.m in Sources */,
+				95100DF608B8823FF3E54927 /* NSFileManager+X.m in Sources */,
+				D574E7F9DA5E9DDC67D9FA95 /* NSInvocation+X.m in Sources */,
+				1BCEA01D046F3EFD4901623D /* NSMutableArray+X.m in Sources */,
+				8D46D11FAAA2FB9957159DDA /* NSMutableDictionary+X.m in Sources */,
+				04F7BF07E1A9C30AEFA6544E /* NSMutableString+X.m in Sources */,
+				B5474E740BF6BCE50AF977D4 /* NSNumber+X.m in Sources */,
+				58F665F658481377253C8393 /* NSObject+X.m in Sources */,
+				3ECE2C5FD129A4935A7ED778 /* NSString+X.m in Sources */,
+				78F94739474BB36B848F5460 /* XFile.m in Sources */,
+				F963F9F4F7EF6D427F43A28C /* RegexKitLite.m in Sources */,
+				F795ABB51E148DBD0F940847 /* XCore.m in Sources */,
+				91DC05A42E96A7A12C5EAE6A /* XDoublet.m in Sources */,
+				9987E406AD8766901AE73AC8 /* XMethod.m in Sources */,
+				BCC27BB3838DB0447EE63D8E /* XObject.m in Sources */,
+				763AD89A23FACBA66D4F3537 /* XQuadruplet.m in Sources */,
+				F582438DA5051341DF772EBF /* XString.m in Sources */,
+				5DE8F3DCEC5479B57FC4F0F0 /* XTrampoline.m in Sources */,
+				3F3B64ED7CC939A771D55AA6 /* XTriplet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2E7BAA5002B28E429A51538F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+		361DF0A861678DF7276037D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FrameworkXCore_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = FrameworkXCore;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		786E789D980881AB896F34B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "Untitled-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		B780D2868810611C78576591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FrameworkXCore_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = FrameworkXCore;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		D464A6A7754E63410FA8D329 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		F9171267B57B8B7B267E2101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "Untitled-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		918737E18458658A53F2F079 /* Build configuration list for PBXNativeTarget "FrameworkXCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				361DF0A861678DF7276037D8 /* Debug */,
+				B780D2868810611C78576591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A40AB0EDC65CC8F439A3D561 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9171267B57B8B7B267E2101 /* Debug */,
+				786E789D980881AB896F34B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80DCC5BA26007B19EBC6EA9 /* Build configuration list for PBXProject "FrameworkXCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D464A6A7754E63410FA8D329 /* Debug */,
+				2E7BAA5002B28E429A51538F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4883CBF3F1436263D7B0E078 /* Project object */;
+}

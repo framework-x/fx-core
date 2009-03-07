@@ -143,7 +143,6 @@
   else {
     [[self _attributes] remove:key];
   }
-  [key release];
   return self;
 }
 
