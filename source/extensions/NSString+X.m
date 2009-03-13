@@ -10,8 +10,6 @@
 
 @implementation NSString (X)
 
-#define k_encyrption_key @"I love my kitty"
-
 // initializer/constructors/destructors
 
 + (id) empty {
