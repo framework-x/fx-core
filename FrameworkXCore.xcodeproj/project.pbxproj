@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03D1E4268C60178AA0E9DDC8 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B84B2CC15D04146AD2143261 /* libsqlite3.0.dylib */; settings = {ATTRIBUTES = (Public, ); }; };
 		04F7BF07E1A9C30AEFA6544E /* NSMutableString+X.m in Sources */ = {isa = PBXBuildFile; fileRef = C966C402DF3EC7562E2D2453 /* NSMutableString+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		07029AF6E94FE24C877EBB7C /* XArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D106FEF638730278515E957 /* XArrayTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0782CE14E26D7D5A0BAD7AA2 /* XObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3478CEA19779C1C0A6259A /* XObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,7 +31,6 @@
 		3EEFA79A4238E99FB4A69CE6 /* NSNumber+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 181659F132975ED7416AA37D /* NSNumber+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F3B64ED7CC939A771D55AA6 /* XTriplet.m in Sources */ = {isa = PBXBuildFile; fileRef = A20535CD765EB90FDD7CCA3E /* XTriplet.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		45B212F6F19FB661BAA75F51 /* NSNull+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 86CFA4F59A79424044C62C5F /* NSNull+X.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D61AFAF4B0932BD572813C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75DEFC1BF9A47ADA06C6F91 /* Foundation.framework */; settings = {ATTRIBUTES = (Public, ); }; };
 		542A12EA3C41C08A13827693 /* XArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 28341599EB2DFD3940EAFC28 /* XArray.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		5440C5457F1EFA37F334137D /* NSDateFormatter+X.m in Sources */ = {isa = PBXBuildFile; fileRef = FE19D07FD4CE1F489949CBA9 /* NSDateFormatter+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		58F665F658481377253C8393 /* NSObject+X.m in Sources */ = {isa = PBXBuildFile; fileRef = E0AF129B1B8ADF7E6821B0A2 /* NSObject+X.m */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,7 +47,6 @@
 		751ECB42DD15B957C28076B8 /* XTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DE85F487512659CE42F350 /* XTestCase.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		763AD89A23FACBA66D4F3537 /* XQuadruplet.m in Sources */ = {isa = PBXBuildFile; fileRef = C03C35BF1E83EAC4A0AC4E9A /* XQuadruplet.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		78F94739474BB36B848F5460 /* XFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C643F9CBA290F0D9C95DE /* XFile.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		79F5D8C49D78B347CBAC1B44 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF11A15DF99415EE2677433A /* libxml2.2.dylib */; settings = {ATTRIBUTES = (Public, ); }; };
 		7ACB91D5D2CA7386E06740C4 /* NSMutableString+XTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD2632ABD112441405DF2B /* NSMutableString+XTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		7AE432A71DA1A248097715B3 /* StubbedMethodMementoCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D4A5DEE31934E0EAA3220 /* StubbedMethodMementoCollection.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D34341E9D8CC8E863F1A75E /* XFileTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C729FF66BD090963F8C51514 /* XFileTest.m */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -203,7 +200,6 @@
 		B47B40B445F4D13D31DFD2AA /* NSObject+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+X.h"; sourceTree = "<group>"; };
 		B4CE3770E622DC3505865311 /* XFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFile.h; sourceTree = "<group>"; };
 		B6DA2B962A9AA287BA7D457D /* NSInvocation+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Additions.h"; sourceTree = "<group>"; };
-		B84B2CC15D04146AD2143261 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = /usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		B8EA36D46EAFCBD0C67135F3 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9D6FE7E81B99E2F6861F4F /* NSDictionary+X.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "NSDictionary+X.d"; sourceTree = "<group>"; };
 		BBA26DA8253BC207FAAEE4F0 /* XQuadruplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQuadruplet.h; sourceTree = "<group>"; };
@@ -215,11 +211,9 @@
 		C3C2DE210D08FC21EEF43F01 /* NSObject+XTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XTest.m"; sourceTree = "<group>"; };
 		C57B63FDC8E5B52264B80757 /* XTriplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTriplet.h; sourceTree = "<group>"; };
 		C729FF66BD090963F8C51514 /* XFileTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFileTest.m; sourceTree = "<group>"; };
-		C75DEFC1BF9A47ADA06C6F91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C966C402DF3EC7562E2D2453 /* NSMutableString+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+X.m"; sourceTree = "<group>"; };
 		C9A28DCF6A30A923F3795757 /* NSMutableArray+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+X.h"; sourceTree = "<group>"; };
 		CEB1724A044E378C3B190731 /* NSXMLDocument+TestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLDocument+TestTest.m"; sourceTree = "<group>"; };
-		CF11A15DF99415EE2677433A /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		CFBFBC6F4D11C2D281CF09BD /* NSNumber+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+X.m"; sourceTree = "<group>"; };
 		D0672650DEBFE7A63ECF0C41 /* XAsynchronousTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAsynchronousTestCase.h; sourceTree = "<group>"; };
 		D0F7DA40C96275E66319A751 /* NSString+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+X.m"; sourceTree = "<group>"; };
@@ -260,10 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2368B98E9296547A73688DAF /* Foundation.framework in Frameworks */,
-				03D1E4268C60178AA0E9DDC8 /* libsqlite3.0.dylib in Frameworks */,
 				3332D7017B6697D852924603 /* libicucore.dylib in Frameworks */,
-				79F5D8C49D78B347CBAC1B44 /* libxml2.2.dylib in Frameworks */,
-				4D61AFAF4B0932BD572813C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,10 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				F736FDE51035C867E708632C /* Foundation.framework */,
-				B84B2CC15D04146AD2143261 /* libsqlite3.0.dylib */,
 				73ED83B38AE7E97D89064F6B /* libicucore.dylib */,
-				CF11A15DF99415EE2677433A /* libxml2.2.dylib */,
-				C75DEFC1BF9A47ADA06C6F91 /* Foundation.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
