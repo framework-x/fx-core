@@ -1,7 +1,9 @@
 #import "TestHelper.h"
-#import "NSArray+X.h"
+#import "NSMutableArray+X.h"
 
-@interface NSMutableArrayXTest : XTestCase {}
+@interface NSMutableArrayXTest : XTestCase {
+  id item;
+}
 @end
 
 @implementation NSMutableArrayXTest
@@ -73,6 +75,20 @@
   assert_equal(@"bar", [array at:1]);
 }
 
+- (void) test_insertAt {
+  id obj = @"b";
+  id array = [NSMutableArray withVargs:@"a", @"c", nil]; 
+  [array insert:obj at:1];
+  assert_equal(obj, [array objectAtIndex:1]);
+}
+
+- (void) test_insertAtIndex {
+  id obj = @"b";
+  id array = [XArray withVargs:@"a", @"c", nil]; 
+  [array insert:obj atIndex:1];
+  assert_equal(obj, [array objectAtIndex:1]);
+}
+
 - (void) test_isEmpty {
   id array = [NSMutableArray empty];
   assert_true([array isEmpty]);
@@ -80,11 +96,40 @@
   assert_false([array isEmpty]);
 }
 
+- (void) test_pop {
+  NSMutableArray* array = [NSMutableArray withVargs:@"a", @"b", nil]; 
+  assert_equal(@"a", [array pop]);  
+  assert_equal(@"b", [array pop]);  
+  assert_true([array isEmpty]);  
+  assert_equal(nil, [array pop]);  
+}
+
+- (void) test_push {
+  id array = [NSMutableArray empty];
+  [array push:@"b"];
+  assert_equal_ints(1, [array count]);
+  assert_equal(@"b", [array at:0]);
+  [array push:@"a"];
+  assert_equal_ints(2, [array count]);
+  assert_equal(@"a", [array at:0]);
+  assert_equal(@"b", [array at:1]);
+}
+
 - (void) test_remove {
  NSMutableArray* array = [NSMutableArray empty];
  [array add:@"item"];
  assert_equal(@"item", [array remove:@"item"]);
  assert_true([array isEmpty]);
+}
+
+- (void) test_remove_returns_unreleased_object {
+  NSMutableArray* array = [NSMutableArray empty];
+  id item = [NSObject new];
+  [array add:item];
+  [item release];
+  id result = [array remove:item];
+  [result retainCount];
+  assert_true(item == result);
 }
 
 - (void) test_reverse_with_one_item {
@@ -124,6 +169,15 @@
  NSMutableArray* array = [NSMutableArray empty];
  assert_equal(nil, [array remove:@"item"]);
 }
+
+- (void) test_snap {
+  id array = [NSMutableArray withVargs:@"a", @"b", nil]; 
+  assert_equal(@"a", [array snap]);  
+  assert_equal(@"b", [array snap]);  
+  assert_true([array isEmpty]);  
+  assert_equal(nil, [array snap]);  
+}
+
 
 - (void) test_with {
   id array = [NSMutableArray withVargs:@"foo", @"bar", nil]; 

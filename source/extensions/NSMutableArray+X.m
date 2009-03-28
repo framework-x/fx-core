@@ -61,10 +61,33 @@
   return self;
 }
 
+- (id) insert: (id)obj at: (NSUInteger)index {
+  [self insertObject:obj atIndex: index];
+  return self;
+}
+
+- (id) insert: (id)obj atIndex: (NSUInteger)index {
+  return [self insert:obj at:index];
+}
+
+- (id) pop {
+  if ([self isNotEmpty]) {
+    id value = [[self at:0] retain];
+    [self removeObjectAtIndex:0];
+    return [value autorelease];
+  }
+  return nil;
+}
+
+- (id) push: (id)item {
+  return [self insert:item at:0];
+}
+
 - (id) remove: (id)object {
   if ([self contains:object]) {
+    [object retain];
     [self removeObject:object];
-    return object;
+    return [object autorelease];
   }
   return nil;
 }
@@ -80,5 +103,10 @@
   }
   return self;
 }
+
+- (id) snap {
+  return [self pop];
+}
+
 
 @end
