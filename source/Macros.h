@@ -30,4 +30,9 @@
 
 #define trueObject\
   [NSNumber trueObj]
-  
+
+#define True \
+  [NSNumber trueObj]
+
+#define False \
+  [NSNumber falseObj]
