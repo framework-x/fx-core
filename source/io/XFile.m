@@ -139,18 +139,18 @@
 }
 
 - (id) write: (id)stuff {
-  if ([stuff kindOf:[NSString class]]) {
+  if ([stuff isKindOf:[NSString class]]) {
     NSError* error;
     if (![stuff writeToFile:_path atomically:YES encoding:NSUTF8StringEncoding  error:&error]) {
       NSLog(@"writing string %@ to %@ failed with error %@", stuff, _path, error);
     }
   }
-  else if ([stuff kindOf:[NSDictionary class]]) {
+  else if ([stuff isKindOf:[NSDictionary class]]) {
     if (![stuff writeToFile:_path atomically:YES]) {
       NSLog(@"writing dictionary %@ to %@ failed", stuff, _path);
     }
   }
-  else if ([stuff kindOf:[NSData class]]) {
+  else if ([stuff isKindOf:[NSData class]]) {
     if (![stuff writeToFile:_path atomically:YES]) {
       NSLog(@"writing data %@ to %@ failed", stuff, _path);
     }    
