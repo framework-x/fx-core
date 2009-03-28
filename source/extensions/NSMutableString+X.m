@@ -11,11 +11,6 @@
 
 @implementation NSMutableString (X)
 
-// z: unfortunately we can't use NSMutable's appendString method because, inexplicably, non-mutable strings call this method on themselves; I blame NSCFString
-- (id) append: (id)string {
-  return [XString with:self, string, nil];
-}
-
 - (id) delete: (id)string {
   [self replaceOccurrencesOfString:string withString:@"" options:NSLiteralSearch range:NSMakeRange(0, [self length])];
   return self;
