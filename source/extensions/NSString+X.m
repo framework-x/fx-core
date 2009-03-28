@@ -10,6 +10,8 @@
 
 @implementation NSString (X)
 
+#define k_encyrption_key @"I love my kitty"
+
 // initializer/constructors/destructors
 
 + (id) empty {
@@ -71,6 +73,8 @@
 
 // public instance methods
 
+// z: this method is shared by NSMutableString and its descendants; mutable strings should use appendString because it's faster
+// the reason NSMutable string doesn't have its own implementation of this method is because when it does, immutable strings inexplicably call that mutable method (and barf) instead of this one; I blame class clusters and NSCFString for being written poorly
 - (id) append: (id)str {
   return [XString with:self, str, nil];
 }
@@ -88,6 +92,7 @@
 - (id) asDoubleObject {
   return [NSNumber double:[self doubleValue]];  
 }
+
 - (id) asIntObject {
   return [NSNumber int:[self intValue]];
 }
@@ -255,16 +260,16 @@
 
 - (id) splitIntoLinesNoLongerThan: (int)lineLength {
   id result = [XArray empty];
-  id words = [self split:@" "];
+  id words = [self split:@" "]; // z: this returns immutable strings even if called in NSMutableString or one of its descendants
   
   int cursor = 0;
   for (id word in words) {
     if (![result at:cursor]) {
-      [result add:word];
+      [result add:[XString from:word]];
     }
-    else if (([[result at:cursor] length] + [word length] + 1) > lineLength){
+    else if (([[result at:cursor] length] + [word length] + 1) > lineLength) {
       cursor++;
-      [result add:word];
+      [result add: [XString from:word]];
     }
     else {
       [result replaceObjectAtIndex:cursor withObject:[[result at:cursor] append:[XString withFormat:@" %@", word, nil]]];
@@ -313,15 +318,15 @@
 // protected class methods
 
 + (id) _with: (id)first vaList:(va_list)ap {
-  id str = [self empty];
+  id str = [XString empty];
   id part;
   if (first) {
-    str = [str append:first];
+    [str append:first];
     while (part = va_arg(ap, id)) {
-      str = [str append:part];
+      [str append:part];
     }
   }
-  return str;
+  return [self stringWithString:str];
 }
 
 - (id) _gsub: (id)regex with: (id)replacement modifiers: (id)modifiersHash {

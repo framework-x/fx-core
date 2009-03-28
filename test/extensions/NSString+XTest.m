@@ -9,6 +9,16 @@
 
 @implementation NSStringXTest
 
+- (void) test_append {
+  id str = @"";
+  str = [str append:@"foo"];
+  assert_equal(@"foo", str);
+  str = [str append:@"bar"];
+  assert_equal(@"foobar", str);
+  str = [str append:@"baz"];
+  assert_equal(@"foobarbaz", str);
+}
+
 - (void) test_asCString {
   assert_true(0 == strcmp("hello world", [@"hello world" asCString]));
 }
