@@ -9,7 +9,52 @@
 
 @implementation NSDictionary (X)
 
-// public class methods
+// initializer/class factory methods/constructors/destructor
+
++ (id) atPath: (id)path {
+  return [[[self alloc] initWithContentsOfFile:path] autorelease];
+}
+
++ (id) empty {
+  return [[[self alloc] init] autorelease];
+}
+
+// todo: z: why not just have this be with:? or have both?
+// takes a list of key, value, key2, value2, etc.
++ (id) withVargs: (id)firstKey, ... {
+  id instance;
+  if (firstKey) {
+   va_list argList; 
+   va_start(argList, firstKey);
+   instance = [self with:firstKey vaList:argList];
+   va_end(argList); 
+ }
+  else {
+    instance = [self empty];
+  }
+ return instance;  
+}
+
++ (id) with: (id)firstKey vaList: (va_list)argList {
+  id item;
+  id keys = [XArray empty];
+  id values = [XArray empty];
+  int count = 1; 
+  if (firstKey) {
+    [keys add:firstKey];
+    while (item = va_arg(argList, id)) {
+      if (count++ % 2 == 0) {
+        [keys add:item];
+      }
+      else {
+        [values add:item];
+      }
+    }
+  }
+ return [self dictionaryWithObjects:values forKeys:keys];  
+}
+
+// public instance methods
 
 - (id) asQueryString {
 	id queryStringComponents = [XArray empty];
@@ -29,15 +74,14 @@
   return [[queryStringComponents join:@"&"] urlEncoded];  
 }
 
-+ (id) empty {
-  return [[[XHash alloc] init] autorelease];
+- (id) clone {
+  // z: this method never seems to be called because NSMutable dictionary has its own version and the class cluster stuff seems to always use it
+  return [self copyWithZone:nil];
 }
 
-+ (id) withPath: (id)path {
-  return [[[self alloc] initWithContentsOfFile:path] autorelease];
+- (BOOL) contains: (id)key {
+  return [self containsKey:key];
 }
-
-// public instance methods
 
 - (BOOL) containsKey: (id)key {
   return [self hasKey:key];

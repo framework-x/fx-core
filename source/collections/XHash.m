@@ -22,6 +22,12 @@ id XHashWith(id firstKey, ...)  {
 
 @implementation XHash
 
+// initializer/class factory methods/constructors/destructor
+
++ (void) initialize {
+  [self aliasInstanceMethod:@"clone" as:@"dup"];
+} 
+
 + (id) empty {
   return [[[self alloc] init] autorelease];
 }
@@ -35,6 +41,7 @@ id XHashWith(id firstKey, ...)  {
   return [[[self alloc] initWith:delegate] autorelease];
 }
 
+// todo: z: why not just have this be with:? or have both?
 // takes a list of key, value, key2, value2, etc.
 + (id) withVargs: (id)firstKey, ... {
   id instance;
@@ -68,6 +75,8 @@ id XHashWith(id firstKey, ...)  {
 	return instance;	
 }
 
+// constructors/destructors
+
 - (id) init {
   id delegate = [[NSMutableDictionary alloc] init];
   id result = [self initWith:delegate];
@@ -75,6 +84,7 @@ id XHashWith(id firstKey, ...)  {
   return result;
 } 
 
+// todo: z: rename this to initWithDelegate to avoid confusion; people are likely to think this is a copy constructor when it really isn't
 - (id) initWith: (id)delegate {
 	if (self = [super init]) {
     _delegate = [delegate retain];
@@ -95,6 +105,10 @@ id XHashWith(id firstKey, ...)  {
 } 
 
 // these 5 methods need to be implemented to enable inheritance from NSMutableDictionary
+
+- (id) clone {
+  return [XHash from:self];
+}
 
 - (NSUInteger) count {
   return [_delegate count];

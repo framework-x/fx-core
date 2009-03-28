@@ -9,6 +9,7 @@
 
 id XHashWith(id firstKey, ...);
 
++ (void) initialize;
 + (id) empty;
 + (id) from: (id)other;
 + (id) from: (id)other copyItems: (BOOL)copyItems;
@@ -18,6 +19,7 @@ id XHashWith(id firstKey, ...);
 - (id) initWith: (id)delegate;
 - (id) initWithCapacity: (NSUInteger) numItems;
 - (void) dealloc;
+- (id) clone;
 - (NSUInteger) count;
 - (NSEnumerator*) keyEnumerator;
 - (id) objectForKey: (id)key;

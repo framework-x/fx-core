@@ -4,9 +4,13 @@
 
 
 @interface NSDictionary (X)
-- (id) asQueryString;
++ (id) atPath: (id)path;
 + (id) empty;
-+ (id) withPath: (id)path;
++ (id) withVargs: (id)firstKey, ...;
++ (id) with: (id)firstKey vaList: (va_list)argList;
+- (id) asQueryString;
+- (id) clone;
+- (BOOL) contains: (id)key;
 - (BOOL) containsKey: (id)key;
 - (id) get: (id)key;
 - (BOOL) hasKey: (id)key;
