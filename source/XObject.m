@@ -19,7 +19,7 @@
 
 @implementation XObject
 
-// constructors/destructors
+// initializer/class factory methods/constructors/destructor
 
 - (id) init {
   if (self = [super init]) {
@@ -41,7 +41,6 @@
 	[_delegations release];
 	[super dealloc]; 
 } 
-
 
 // public class methods
 
@@ -97,6 +96,7 @@
   }
   return self;  
 }
+
 // protected instance methods
 
 - (id) _attributes {
@@ -128,11 +128,11 @@
   return nil;
 }
 
-// todo: z: make this faster
 - (id) _setHashAttrByCmd: (id)value {
   char buffer[128] = "";
   const char* selectorName = sel_getName(_cmd);
   int length = strlen(selectorName);
+  // todo: z: what about memory consequences?
   strncpy(buffer, selectorName+3, length - 4);
   buffer[0] += 32;
   
