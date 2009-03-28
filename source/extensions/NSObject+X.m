@@ -310,15 +310,6 @@
 
 // protected instance methods
 
-// z: undefined behavior if method is not of the form setX:
-// todo: z: should prolly use double underscores for non-public methods we add to NSObject
-- (id) _attributeSetterWithoutSetAndColon: (id)method {
-  NSRange range;
-  range.location = 3;
-  range.length = [method length] - 4;
-  return [[method substringWithRange:range] asCamelCase];
-}
-
 - (id) _delegates {
   return nil;
 }
