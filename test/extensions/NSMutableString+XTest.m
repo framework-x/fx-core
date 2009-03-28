@@ -6,12 +6,6 @@
 
 @implementation NSMutableStringXTest
 
-- (void) test_append {
-  id str = [NSMutableString empty];
-  assert_equal(@"", str);
-  assert_equal(@"foo", [str append:@"foo"]);
-}
-
 - (void) test_delete {
   id string = [NSMutableString stringWithCapacity:20];
   [string appendString:@"fooboo"];
@@ -69,5 +63,6 @@
   [str removeWhitespace];
   assert_equal(@"abc", str);  
 }
+
 
 @end
