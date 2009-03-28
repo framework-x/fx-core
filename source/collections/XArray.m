@@ -20,7 +20,7 @@ id XArrayWith(id firstItem, ...)  {
 
 @implementation XArray
 
-// public class methods
+// public class factory methods
 
 + (id) empty {
 	return [[[self alloc] init] autorelease];
@@ -91,7 +91,7 @@ id XArrayWith(id firstItem, ...)  {
 }
 
 - (void) insertObject: (id)obj atIndex: (NSUInteger)index {
-	[_delegate insertObject: obj atIndex: index];
+  [_delegate insertObject: obj atIndex: index];
 }
 
 - (id) objectAtIndex: (NSUInteger)index {
@@ -99,7 +99,7 @@ id XArrayWith(id firstItem, ...)  {
 }
 
 - (void) removeObjectAtIndex: (NSUInteger)index {
-	[_delegate removeObjectAtIndex: index];
+	[_delegate removeObjectAtIndex:index];
 }
 
 - (void) removeLastObject {
