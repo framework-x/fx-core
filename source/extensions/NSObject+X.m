@@ -16,8 +16,7 @@
 
 @implementation NSObject (X)
 
-// initializer/constructors/destructor
-
+// initializer/class factory methods/constructors/destructor
 
 + (id) withHash: (id)hash {
   return [[[self alloc] initWithHash:hash] autorelease];
@@ -33,7 +32,7 @@
 // public class methods
 
 // todo: z:
-// then add methods for adding a method but where you can choose the name e.g.
+// add methods for adding a method but where you can choose the name e.g.
 // + addInstanceMethod:@"sayHi" imp:hello]);
 // + addMethod: (id)methodName imp: (imp)methodImpl
 // - addMethod: (id)methodName imp: (imp)methodImpl
@@ -72,6 +71,18 @@
   }
 }
 
++ (id) getInstanceMethod: (id)methodName {
+  SEL selector = NSSelectorFromString(methodName);
+  Method method = class_getInstanceMethod(self, selector);
+  return [XMethod with:method from:self];
+}
+
++ (id) getMethod: (id)methodName {
+  SEL selector = NSSelectorFromString(methodName);
+  Method method = class_getClassMethod(self, selector);
+  return [XMethod with:method from:self];
+}
+
 + (id) ivarAccessors: (id)firstItem, ... {
   va_list argList; 
   va_start(argList, firstItem);
@@ -96,18 +107,6 @@
   return [self _ivarWriters:writableAttributes];
 }
 
-+ (id) getInstanceMethod: (id)methodName {
-  SEL selector = NSSelectorFromString(methodName);
-  Method method = class_getInstanceMethod(self, selector);
-  return [XMethod with:method from:self];
-}
-
-+ (id) getMethod: (id)methodName {
-  SEL selector = NSSelectorFromString(methodName);
-  Method method = class_getClassMethod(self, selector);
-  return [XMethod with:method from:self];
-}
-
 + (id) replaceMethodImplementation: (id)methodName with: (id)replacementXMethod {
   id oldXMethod = [self getMethod:methodName];
   method_setImplementation([oldXMethod method], [replacementXMethod imp]);
@@ -128,7 +127,7 @@
   id methodBeingAliased = [self getMethod:method];
   SEL aliasSelector = NSSelectorFromString(aliasName);
   Method existingMethodWithAliasName = class_getInstanceMethod([self class], aliasSelector); // will be null if aliasName doesn't exist; otherwise it will be the existing Method
-  if (existingMethodWithAliasName) {
+  if (existingMethodWithAliasName) { // existing method so change it's imp
     return (method_setImplementation(existingMethodWithAliasName, [methodBeingAliased imp]) != NULL);
   }
   else { // new method so add it
@@ -142,7 +141,25 @@
     [[self _delegations] setObject:object forKey:methodName];
   }
   else {
-    NSLog(@"use of NSObject:_forward:to: when _hasDelegations returns NO");
+    NSLog(@"use of NSObject:forward:to: when _hasDelegations returns NO");
+  }
+  return self;
+}
+
+- (id) forwardTo: (id)object methods: (id)firstMethodName, ... {
+  va_list argList; 
+  va_start(argList, firstMethodName);
+  id methodNames = [XArray with:firstMethodName vaList:argList];
+  va_end(argList);
+  
+  if ([self _hasDelegations]) {
+    int i = 1;
+    for (id methodName in methodNames) {
+      [[self _delegations] setObject:object forKey:methodName];
+    }
+  }
+  else {  
+    NSLog(@"use of NSObject:forwardTo:methods: when _hasDelegations returns NO");
   }
   return self;
 }
@@ -195,7 +212,7 @@
   return [[self class] isSubclassOfClass:class];
 }
 
-- (BOOL) kindOf: (Class)class {
+- (BOOL) isKindOf: (Class)class {
   return [self isa:class];
 }
 
@@ -219,6 +236,7 @@
   return nil;
 }
 
+// todo: z: should remove these from fx core and put them somewhere else, like fx:iphone or fx:threads
 - (id) performMethodOnNewThread: (id)methodName {
   id paramSet = [_XParameterSet withHash:XHashWith(@"methodToPerform", methodName, nil)];
   [NSThread detachNewThreadSelector:@selector(_performMethodOnNewThreadHelper:) toTarget:self withObject:paramSet];
@@ -301,7 +319,6 @@
   return [[method substringWithRange:range] asCamelCase];
 }
 
-
 - (id) _delegates {
   return nil;
 }
@@ -317,6 +334,7 @@
 
 - (id) _getAttributeByCmd {
   char buffer[128] = "_";
+  // todo: z: what about memory consequences?
   const char* ivarName = strcat(buffer, sel_getName(_cmd));
 
   Ivar ivar = class_getInstanceVariable([self class], ivarName);
@@ -368,6 +386,7 @@
   char buffer[128] = "_";
   const char* selectorName = sel_getName(_cmd);
   int length = strlen(selectorName);
+  // todo: z: what about memory consequences?
   strncpy(buffer+1, selectorName+3, length - 4);
   buffer[1] += 32;
   const char* ivarName = buffer;
