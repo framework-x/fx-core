@@ -2,6 +2,8 @@
 #import "XCore.h"
 
 /*
+#import "XTrampoline.h"
+
 @interface NSArray (X)
 @end
 */
@@ -108,8 +110,8 @@
   return [self objectAtIndex:index];
 }
 
-- (id) collect {
-  return [XTrampoline newWith:self bounceBackMethodName:@"_collect:"];
+- (XTrampoline*) collect {
+  return [XTrampoline with:self bounceBackMethodName:@"_collect:"];
 }
 
 - (id) compact {
@@ -126,8 +128,8 @@
   return [self containsObject:object];
 }
 
-- (id) eachDo {
-  return [XTrampoline newWith:self bounceBackMethodName:@"_eachDo:"];
+- (XTrampoline*) eachDo {
+  return [XTrampoline with:self bounceBackMethodName:@"_eachDo:"];
 }
 
 - (id) first {
@@ -147,8 +149,20 @@
   return [self at:index];
 }
 
+
+- (id) higherOrderMethodSignatureForSelector:(SEL)selector {
+  if ([self isEmpty]) {
+    return [self methodSignatureForSelector:@selector(_doNothing)];
+  }
+  return [[self first] methodSignatureForSelector:selector];
+}
+
 - (BOOL) isEmpty {
   return [self count] == 0;
+}
+
+- (BOOL) isNotEmpty {
+  return [self count] > 0;
 }
 
 - (id) join: (id)joiningString {
@@ -176,11 +190,16 @@
   return [self collect];
 }
 
-- (id) higherOrderMethodSignatureForSelector:(SEL)selector {
-  if ([self isEmpty]) {
-    return [self methodSignatureForSelector:@selector(_doNothing)];
-  }
-  return [[self first] methodSignatureForSelector:selector];
+- (id) peek {
+  return [self top];
+}
+
+- (id) range: (NSRange)range {
+  return [self subarrayWithRange:range];
+}
+
+- (XTrampoline*) reject {
+  return [XTrampoline with:self bounceBackMethodName:@"_reject:"];
 }
 
 - (id) sortBy: (id)selectorString {
@@ -190,20 +209,20 @@
   return [self sortedArrayUsingDescriptors:sortDescriptors];  		
 }
 
-- (id) range: (NSRange)range {
-  return [self subarrayWithRange:range];
-}
-
 - (NSUInteger) size {
   return [self count];
 }
 
+- (id) top {
+  return [self at:0];
+}
+
 // protected instance methods
 
-- (id) _collect: (id)higherOrderMethodInvocation {
+- (id) _collect: (id)invocation {
   id newArray = [XArray empty];
   for (id item in self) {
-    id returnValue = [higherOrderMethodInvocation returnValueAfterInvokingOn:item];
+    id returnValue = [invocation returnValueAfterInvokingOn:item];
     if (returnValue) {      
       [newArray append:returnValue];
     }
@@ -211,7 +230,6 @@
       [newArray append:nullObject];
     }
   }
-  [higherOrderMethodInvocation setReturnValue:&newArray];
   return newArray;
 }
 
@@ -219,12 +237,23 @@
   return self;
 }
 
-- (id) _eachDo: (id)higherOrderMethodInvocation {
+- (id) _eachDo: (id)invocation {
   for (id item in self) {
-    [higherOrderMethodInvocation invokeWithTarget:item];
+    [invocation invokeWithTarget:item];
   }
-  [higherOrderMethodInvocation setReturnValue:&self];  
   return self;
 }
+
+- (id) _reject: (id)invocation {
+  id newArray = [XArray empty];
+  for (id item in self) {
+    id returnValue = [invocation returnValueAfterInvokingOn:item];
+    if ([returnValue isFalse]) {      
+      [newArray append:item];
+    }
+  }
+  return newArray;
+}
+
 
 @end

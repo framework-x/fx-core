@@ -2,6 +2,7 @@
 // Generated from .m file
 // ****************************************
 
+#import "XTrampoline.h"
 
 @interface NSArray (X)
 + (id) empty;
@@ -12,24 +13,29 @@
 - (id) as2D: (int)sizeOfInnerArrays;
 - (id) asHash;
 - (id) at: (NSUInteger)index;
-- (id) collect;
+- (XTrampoline*) collect;
 - (id) compact;
 - (BOOL) contains: (id)object;
-- (id) eachDo;
+- (XTrampoline*) eachDo;
 - (id) first;
 - (id) from: (int)startIndex to: (int)endIndexInclusive;
 - (id) from: (int)startIndex withLength: (int)length;
 - (id) get: (NSUInteger)index;
 - (BOOL) isEmpty;
+- (BOOL) isNotEmpty;
 - (id) join: (id)joiningString;
 - (id) last;
 - (NSUInteger) length;
 - (id) map;
-- (id) higherOrderMethodSignatureForSelector:(SEL)selector;
-- (id) sortBy: (id)selectorString;
+- (id) peek;
 - (id) range: (NSRange)range;
+- (XTrampoline*) reject;
+- (id) sortBy: (id)selectorString;
 - (NSUInteger) size;
-- (id) _collect: (id)higherOrderMethodInvocation;
+- (id) top;
+- (id) _collect: (id)invocation;
 - (id) _doNothing;
-- (id) _eachDo: (id)higherOrderMethodInvocation;
+- (id) _eachDo: (id)invocation;
+- (id) _reject: (id)invocation;
+- (id) higherOrderMethodSignatureForSelector:(SEL)selector;
 @end

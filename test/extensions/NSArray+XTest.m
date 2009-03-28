@@ -174,6 +174,20 @@
   assert_equal(nil, [[XArray empty] at:1]);  
 }
 
+- (void) test_asHash {
+	id array = [NSArray withVargs:@"key1", @"a", @"key2", @"b", nil];   
+  id expected = [XHash withVargs:@"key1", @"a", @"key2", @"b", nil];
+  id hash = [array asHash];
+  assert_equal(expected, hash);
+}
+
+- (void) test_asHash_with_empty_array {
+  id array = [NSArray empty];   
+  id expected = [XHash empty];
+  id hash = [array asHash];
+  assert_equal(expected, hash);
+}
+
 - (void) test_collect {
   id array = [NSArray withVargs:@"Hello_World", @"Goodbye_Cruel_World", nil]; 
 	id expected = [NSArray withVargs:@"hello_world", @"goodbye_cruel_world", nil]; 	
@@ -323,6 +337,13 @@
   assert_true([array isEmpty]);
 }
 
+- (void) test_isNotEmpty {
+  id array = [NSArray empty];
+  assert_false([array isNotEmpty]);
+  array = [NSArray withVargs:@"foo", nil]; 
+  assert_true([array isNotEmpty]);
+}
+
 - (void) test_join {
 	id array = [NSArray withVargs:@"a", @"b", nil]; 
 	assert_equal(@"a, b", [array join:@", "]);
@@ -369,6 +390,16 @@
 	assert_equal(expected, newArray); 
 }
 
+- (void) test_peek {
+	id array = [NSArray withVargs:@"foo", @"bar", nil]; 
+  assert_equal(@"foo", [array peek]);
+  assert_equal(@"foo", [array peek]);
+  array = [NSMutableArray withVargs:@"foo", @"bar", nil]; 
+  assert_equal(@"foo", [array peek]);
+  [array pop];
+  assert_equal(@"bar", [array peek]);
+}
+
 - (void) test_range {
   id array = [NSArray withVargs:@"foo", @"bar", @"baz", nil]; 
   id expected, actual;
@@ -391,6 +422,21 @@
 
   expected = [NSArray withVargs:@"bar", @"baz", nil]; 
   actual = [array range:NSMakeRange(1, 2)];
+  assert_equal(expected, actual);
+}
+
+// todo: z: one more reason to only return ids. should we eliminate BOOL return values in fx?
+// - (void) test_reject {
+//   id array = [NSArray withVargs:@"", @"foo", @"bar", @"", @"baz", @"", nil]; 
+//   id expected = [NSArray withVargs:@"foo", @"bar", @"baz", nil];  
+//   id actual = [[array reject] testsIsEmptyButReturnsAnObject]; // this method must return an id; BOOLs are a problem
+//   assert_equal(expected, actual);
+// }
+
+- (void) test_reject_when_array_is_empty {
+  id array = [NSArray new];
+  id expected = [NSArray new];
+  id actual = [[array reject] isEmpty];
   assert_equal(expected, actual);
 }
 
@@ -419,23 +465,20 @@
 - (void) test_sortBy_with_an_empty_array {
   assert_equal([[NSArray alloc] init], [[[NSArray alloc] init] sortBy:@"count"]);
 }
-- (void) test_asHash {
-	id array = [NSArray withVargs:@"key1", @"a", @"key2", @"b", nil];   
-  id expected = [XHash withVargs:@"key1", @"a", @"key2", @"b", nil];
-  id hash = [array asHash];
-  assert_equal(expected, hash);
-}
 
-- (void) test_asHash_with_empty_array {
-  id array = [NSArray empty];   
-  id expected = [XHash empty];
-  id hash = [array asHash];
-  assert_equal(expected, hash);
+- (void) test_top {
+  id array = [NSArray withVargs:@"foo", @"bar", nil]; 
+  assert_equal(@"foo", [array peek]);
+  assert_equal(@"foo", [array peek]);
+  array = [NSMutableArray withVargs:@"foo", @"bar", nil]; 
+  assert_equal(@"foo", [array peek]);
+  [array pop];
+  assert_equal(@"bar", [array peek]);
 }
 
 - (void) test_withVargs_constructs_reference_to_NSArray_object {
 	id array = [NSArray withVargs:@"a", @"b", nil]; 
-	assert_true([array kindOf:[NSArray class]]);
+	assert_true([array isKindOf:[NSArray class]]);
 }
 
 - (void) test_withVargs_with_0_items {

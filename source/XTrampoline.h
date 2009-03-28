@@ -2,13 +2,12 @@
 // Generated from .m file
 // ****************************************
 
-#import "XObject.h"
 
-@interface XTrampoline : XObject {
+@interface XTrampoline : NSProxy {
   id _bounceBackMethod;
   id _targetObject;
 }
-+ (id) newWith: (id)targetObject bounceBackMethodName: (id)bounceBackMethod;
++ (id) with: (id)targetObject bounceBackMethodName: (id)bounceBackMethod;
 - (id) initWith: (id)targetObject bounceBackMethodName: (id)bounceBackMethod;
 - (void) dealloc;
 - (id) bounceBackMethod;

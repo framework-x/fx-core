@@ -1,28 +1,25 @@
 #import "XTrampoline.h"
 
 #import "XObject.h"
-
 /*
-#import "XObject.h"
 
-@interface XTrampoline : XObject {
+@interface XTrampoline : NSProxy {
   id _bounceBackMethod;
   id _targetObject;
 }
 @end
 */
 
-// todo: z: should extend XProxy (not XObject) 
 @implementation XTrampoline
 
-+ (id) newWith: (id)targetObject bounceBackMethodName: (id)bounceBackMethod {
-  return [[self alloc] initWith:targetObject bounceBackMethodName:bounceBackMethod];
++ (id) with: (id)targetObject bounceBackMethodName: (id)bounceBackMethod {
+  return [[[self alloc] initWith:targetObject bounceBackMethodName:bounceBackMethod] autorelease];
 }
 
-// constructors /destructors
+// constructors/destructors
 
 - (id) initWith: (id)targetObject bounceBackMethodName: (id)bounceBackMethod {
-  if (self = [super init]) {
+  if (self) {
     _targetObject = [targetObject retain];
     _bounceBackMethod = [bounceBackMethod retain];
   }
@@ -42,14 +39,13 @@
 }
 
 - (void) forwardInvocation: (NSInvocation*)invocation {
-  [_targetObject performSelector:NSSelectorFromString(_bounceBackMethod) withObject:invocation];
+  id returnValue = [_targetObject performSelector:NSSelectorFromString(_bounceBackMethod) withObject:invocation];
+  [invocation setReturnValue:&returnValue];
 }
 
 - (NSMethodSignature*) methodSignatureForSelector: (SEL)selector {
-  id sig = [_targetObject higherOrderMethodSignatureForSelector:selector];
-  return sig;
+  return [_targetObject higherOrderMethodSignatureForSelector:selector];
 }
-
 
 - (id) targetObject {
   return _targetObject;
