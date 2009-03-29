@@ -481,9 +481,12 @@ static id classLevelVariable;
   assert_equal(@"hello hello", [object replaceableMethod:@"hello"]);
 }
 
-- (void) test_setAttributes_doesnt_complain_about_missing_keys {
-  id object = [NSObject new];  
-  [object setValuesForKeysWithDictionary:[XHash withVargs:@"foo", @"hello", nil]];
+- (void) test_setAttributes {
+  id object = [NSObjectXTestClass new];
+  id actual = [object _setAttributes:[XHash withVargs:@"foo", @"hello", @"bar", @"world", nil]];
+  assert_equal(object, actual);
+  assert_equal(@"hello", [object foo]);
+  assert_equal(@"world", [object bar]);
 }
 
 - (void) test_setInstanceVariable {
@@ -504,15 +507,6 @@ static id classLevelVariable;
   assert_equal_ints(newValueRetainCount + 1, [newValue retainCount]);
 }
 
-
-// todo: z: put back in place
-// - (void) test_setAttributes {
-//   id object = [NSObjectXTestClass new];
-//   id actual = [object _setAttributes:[XHash withVargs:@"foo", @"hello", @"bar", @"world", nil]];
-//   assert_equal(object, actual);
-//   assert_equal(@"hello", [object foo]);
-//   assert_equal(@"world", [object bar]);
-// }
 
 + (id) replacingMethod {
   return @"a classy goodbye";

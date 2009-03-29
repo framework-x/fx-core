@@ -36,7 +36,6 @@
 - (id) performMethodOnNewThread: (id)methodName withObject: (id)object withCallbackNamed: (id)callback;
 - (id) replaceMethodImplementation: (id)methodName with: (id)replacementXMethod;
 - (id) setInstanceVariable: (id)name to: (id)value;
-- (id) setValue: (id)value forUndefinedKey: (id)key;
 + (id) _ivarAccessors: (id)accessors;
 + (id) _ivarReaders: (id)readers;
 + (id) _ivarWriters: (id)writers;

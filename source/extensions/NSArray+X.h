@@ -21,6 +21,7 @@
 - (id) from: (int)startIndex to: (int)endIndexInclusive;
 - (id) from: (int)startIndex withLength: (int)length;
 - (id) get: (NSUInteger)index;
+- (id) higherOrderMethodSignatureForSelector:(SEL)selector;
 - (BOOL) isEmpty;
 - (BOOL) isNotEmpty;
 - (id) join: (id)joiningString;
@@ -37,5 +38,4 @@
 - (id) _doNothing;
 - (id) _eachDo: (id)invocation;
 - (id) _reject: (id)invocation;
-- (id) higherOrderMethodSignatureForSelector:(SEL)selector;
 @end

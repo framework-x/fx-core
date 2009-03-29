@@ -15,6 +15,7 @@
 + (id) attrReaders: (id)firstItem, ...;
 + (id) attrWriters: (id)firstItem, ...;
 - (void) encodeWithCoder: (id)coder;
+- (id) setValue: (id)value forUndefinedKey: (id)key;
 + (id) _attrAccessors: (id)accessors;
 + (id) _attrReaders: (id)readers;
 + (id) _attrWriters: (id)writers;

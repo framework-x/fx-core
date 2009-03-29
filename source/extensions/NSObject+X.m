@@ -281,10 +281,11 @@
   return self;
 }
 
-- (id) setValue: (id)value forUndefinedKey: (id)key {
-  // NSLog(@"NSObject+X: not going to setValue %@ for key %@", value, key);
-  return self;
-}
+// todo: z: should move this to the iphone code; not needed here
+// - (id) setValue: (id)value forUndefinedKey: (id)key {
+//   // NSLog(@"NSObject+X: not going to setValue %@ for key %@", value, key);
+//   return self;
+// }
 
 // protected class methods
 

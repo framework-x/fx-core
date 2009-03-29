@@ -16,6 +16,8 @@
 @end
 */
 
+// todo: z: need to make sure that XObject implements all of the Key-Value Coding interface correcty (http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Protocols/NSKeyValueCoding_Protocol/Reference/Reference.html#//apple_ref/doc/uid/20000471-BABEHECF)
+// e.g. attrReaders (without accessors won't be set correct in initWithHash:)
 
 @implementation XObject
 
@@ -73,6 +75,11 @@
 
 - (void) encodeWithCoder: (id)coder {
   // todo: z: needs to encode _attributes and _delegations
+}
+
+- (id) setValue: (id)value forUndefinedKey: (id)key {
+  // NSLog(@"NSObject+X: not going to setValue %@ for key %@", value, key);
+  return self;
 }
 
 // protected class methods
