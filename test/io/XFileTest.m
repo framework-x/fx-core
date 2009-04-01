@@ -55,7 +55,6 @@
 }
 
 - (void) test_currentPath {
-  NSLog(@"z: XFile currentPath = %@", [XFile currentPath]);
   assert_true([[XFile currentPath] hasSuffix:@"/fx-core"]);
 }
 
@@ -159,7 +158,6 @@
 
 - (void) test_write_and_readData_with_binary_content {
   id data = [NSData dataWithContentsOfFile:@"test/integration/framework_x/net/kenny_g.png"];
-  NSLog(@"z: %@", @"test/integration/framework_x/net/kenny_g.png");
   id copyFileName = @"test/framework_x/io/binary.png";
   assert_false([XFile exists:copyFileName]);
   id file = [XFile open:copyFileName];

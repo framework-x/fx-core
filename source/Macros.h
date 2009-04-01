@@ -36,3 +36,9 @@
 
 #define False \
   [NSNumber falseObj]
+
+// todo: z: needs work; only works for parameterless methods  
+#define ALIAS(new, old) \
+	- (id) new	 {			\
+	  return [self old];			\
+	}

@@ -85,6 +85,11 @@
   assert_equal(first, second);    
 }
 
+- (void) test_keys {
+  id dict = [NSDictionary withVargs:@"key1", @"value1", @"key2", @"value2", nil];
+  assert_equal(XArrayWith(@"key1", @"key2", nil), [dict keys]);
+}
+
 - (void) test_withVargs_with_variable_args {
   id hash = [NSDictionary withVargs:@"key1", @"value1", @"key2", @"value2", nil];
   assert_equal(@"value1", [hash objectForKey:@"key1"]);

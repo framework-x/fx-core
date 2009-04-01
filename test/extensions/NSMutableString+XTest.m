@@ -64,5 +64,24 @@
   assert_equal(@"abc", str);  
 }
 
+- (void) test_replaceWith {
+  id string = [NSMutableString stringWithCapacity:20];
+  [string appendString:@"foobar"];
+  [string replace:@"bar" with:@"baz"];
+  assert_equal(@"foobaz", string);
+}
+
+- (void) test_replaceWith_when_empty {
+  id string = [NSMutableString string];
+  [string replace:@"foo" with:@"bar"];
+  assert_equal(@"", string);
+}
+
+- (void) test_replaceWith_when_string_not_found {
+  id string = [NSMutableString string];
+  [string appendString:@"foo"];
+  [string replace:@"bar" with:@"baz"];
+  assert_equal(@"foo", string);
+}
 
 @end

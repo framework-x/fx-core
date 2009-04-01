@@ -35,4 +35,9 @@
   return self;
 }
 
+- (id) replace: (id)string with: (id)otherString {
+  [self replaceOccurrencesOfString:string withString:otherString options:NSLiteralSearch range:NSMakeRange(0, [self length])];
+  return self;
+}
+
 @end

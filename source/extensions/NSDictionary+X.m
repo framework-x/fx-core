@@ -11,6 +11,8 @@
 
 // initializer/class factory methods/constructors/destructor
 
+ALIAS(keys, allKeys);
+
 + (id) atPath: (id)path {
   return [[[self alloc] initWithContentsOfFile:path] autorelease];
 }
@@ -98,6 +100,8 @@
 - (BOOL) isEmpty {
   return [self count] == 0;
 }
+
+// todo: z: implement a values method as alias of allValues
 
 - (id) without: (id)firstKey, ... {
   va_list argList; 

@@ -18,10 +18,12 @@
 
 // initializer/class factory methods/constructors/destructor
 
+// todo: z: we need consistency. should consider renaming this to with:
 + (id) withHash: (id)hash {
   return [[[self alloc] initWithHash:hash] autorelease];
 }
 
+// todo: z: we need consistency. should consider renaming this to initWith:
 - (id) initWithHash: (id)hash {
  	if (self = [self init]) {
 		[self _setAttributes:hash];

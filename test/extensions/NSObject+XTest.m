@@ -464,7 +464,7 @@ static id classLevelVariable;
   assert_equal(@"a classy hello", [NSObjectXTestClass replaceableMethod]);
 }
 
-- (void) test_replaceMethod_called_on_an_instance {
+- (void) test_replaceMethodImplementation_called_on_an_instance {
   id object = [NSObjectXTestClass new];
   // z: hold onto replaceableMethod so we can clean up after ourselves
   id replaceableMethod = @"replaceableMethod:";
