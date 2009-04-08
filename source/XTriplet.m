@@ -14,7 +14,7 @@
 
 @implementation XTriplet
 
-// initialize/constructors/destructor  
+// initializer/class factory methods/constructors/destructor
   
 + (void) initialize {
   [self attrAccessors:@"firstValue", @"secondValue", @"thirdValue", nil];

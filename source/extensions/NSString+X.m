@@ -12,7 +12,7 @@
 
 #define k_encyrption_key @"I love my kitty"
 
-// initializer/constructors/destructors
+// initializer/class factory methods/constructors/destructor
 
 + (id) empty {
   return [self string];
