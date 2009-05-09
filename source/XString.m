@@ -10,6 +10,8 @@
 @end
 */
 
+// todo: z: add an XStringWithFormat() function
+
 @implementation XString 
 
 + (id) empty {	
