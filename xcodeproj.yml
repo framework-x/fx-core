@@ -1,0 +1,122 @@
+targets:
+  - name: FrameworkXCore
+    buildRules: []
+    dependencies: []
+    productType: "com.apple.product-type.framework"
+    product:
+      explicitFileType: wrapper.framework
+      path: FrameworkXCore.framework
+    build_phases:
+      sources:
+        files:
+          - "source/**/*.m"
+      frameworks:
+        - Foundation
+        - LibICU
+    build_configurations:
+      debug:
+        ALWAYS_SEARCH_USER_PATHS: NO
+        COPY_PHASE_STRIP: NO
+        DYLIB_COMPATIBILITY_VERSION: 1
+        DYLIB_CURRENT_VERSION: 1
+        FRAMEWORK_VERSION: A
+        GCC_DYNAMIC_NO_PIC: NO
+        GCC_ENABLE_FIX_AND_CONTINUE: YES
+        GCC_MODEL_TUNING: G5
+        GCC_OPTIMIZATION_LEVEL: 0
+        GCC_PRECOMPILE_PREFIX_HEADER: YES
+        GCC_PREFIX_HEADER: FrameworkXCore_Prefix.pch
+        HEADER_SEARCH_PATHS: /usr/include/libxml2
+        INFOPLIST_FILE: Info.plist
+        PRODUCT_NAME: FrameworkXCore
+        WRAPPER_EXTENSION: framework
+      release:
+        ALWAYS_SEARCH_USER_PATHS: NO
+        DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
+        DYLIB_COMPATIBILITY_VERSION: 1
+        DYLIB_CURRENT_VERSION: 1
+        FRAMEWORK_VERSION: A
+        GCC_MODEL_TUNING: G5
+        GCC_PRECOMPILE_PREFIX_HEADER: YES
+        GCC_PREFIX_HEADER: FrameworkXCore_Prefix.pch
+        HEADER_SEARCH_PATHS: /usr/include/libxml2
+        INFOPLIST_FILE: Info.plist
+        PRODUCT_NAME: FrameworkXCore
+        WRAPPER_EXTENSION: framework
+  - name: UnitTests
+    buildRules: []
+    dependencies: []
+    productType: "com.apple.product-type.bundle"
+    product:
+      explicitFileType: wrapper.cfbundle
+      path: UnitTests.octest
+    build_phases:
+      sources:
+        files:
+          - "test/**/*.m"
+      frameworks:
+        - "FrameworkXCore.framework"
+    build_configurations:
+      debug:
+        ALWAYS_SEARCH_USER_PATHS: NO
+        COPY_PHASE_STRIP: NO
+        FRAMEWORK_SEARCH_PATHS: "$(DEVELOPER_LIBRARY_DIR)/Frameworks"
+        GCC_DYNAMIC_NO_PIC: NO
+        GCC_ENABLE_FIX_AND_CONTINUE: NO
+        GCC_ENABLE_OBJC_EXCEPTIONS: YES
+        GCC_MODEL_TUNING: G5
+        GCC_OPTIMIZATION_LEVEL: 0
+        GCC_PRECOMPILE_PREFIX_HEADER: YES
+        GCC_PREFIX_HEADER: "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h"
+        HEADER_SEARCH_PATHS: /usr/include/libxml2
+        INFOPLIST_FILE: "Untitled-Info.plist"
+        INSTALL_PATH: "$(USER_LIBRARY_DIR)/Bundles"
+        OTHER_LDFLAGS:
+          - "-framework"
+          - Cocoa
+          - "-framework"
+          - SenTestingKit
+        PREBINDING: NO
+        PRODUCT_NAME: UnitTests
+        WRAPPER_EXTENSION: octest
+      release:
+        ALWAYS_SEARCH_USER_PATHS: NO
+        COPY_PHASE_STRIP: YES
+        DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
+        FRAMEWORK_SEARCH_PATHS: "$(DEVELOPER_LIBRARY_DIR)/Frameworks"
+        GCC_ENABLE_FIX_AND_CONTINUE: NO
+        GCC_ENABLE_OBJC_EXCEPTIONS: YES
+        GCC_MODEL_TUNING: G5
+        GCC_PRECOMPILE_PREFIX_HEADER: YES
+        GCC_PREFIX_HEADER: "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h"
+        HEADER_SEARCH_PATHS: /usr/include/libxml2
+        INFOPLIST_FILE: "Untitled-Info.plist"
+        INSTALL_PATH: "$(USER_LIBRARY_DIR)/Bundles"
+        OTHER_LDFLAGS:
+          - "-framework"
+          - Cocoa
+          - "-framework"
+          - SenTestingKit
+        PREBINDING: NO
+        PRODUCT_NAME: UnitTests
+        WRAPPER_EXTENSION: octest
+        ZERO_LINK: NO
+build_configurations:
+  debug:
+    ARCHS: "$(ARCHS_STANDARD_32_BIT)"
+    GCC_C_LANGUAGE_STANDARD: c99
+    GCC_OPTIMIZATION_LEVEL: 0
+    GCC_WARN_ABOUT_RETURN_TYPE: YES
+    GCC_WARN_UNUSED_VARIABLE: YES
+    HEADER_SEARCH_PATHS: /usr/include/libxml2
+    ONLY_ACTIVE_ARCH: YES
+    PREBINDING: NO
+    SDKROOT: macosx10.5
+  release:
+    ARCHS: "$(ARCHS_STANDARD_32_BIT)"
+    GCC_C_LANGUAGE_STANDARD: c99
+    GCC_WARN_ABOUT_RETURN_TYPE: YES
+    GCC_WARN_UNUSED_VARIABLE: YES
+    HEADER_SEARCH_PATHS: /usr/include/libxml2
+    PREBINDING: NO
+    SDKROOT: macosx10.5
