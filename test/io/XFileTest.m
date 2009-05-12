@@ -1,6 +1,6 @@
 
 #import "TestHelper.h"
-#import "Io.h"
+#import "XIo.h"
 
 @interface XFileTest : XTestCase {}
 @end
