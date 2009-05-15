@@ -25,7 +25,7 @@ targets:
         GCC_MODEL_TUNING: G5
         GCC_OPTIMIZATION_LEVEL: 0
         GCC_PRECOMPILE_PREFIX_HEADER: YES
-        GCC_PREFIX_HEADER: source/FrameworkXCore_Prefix.pch
+        GCC_PREFIX_HEADER: FxCore_Prefix.pch
         HEADER_SEARCH_PATHS: /usr/include/libxml2
         INFOPLIST_FILE: Info.plist
         PRODUCT_NAME: FrameworkXCore
@@ -38,7 +38,7 @@ targets:
         FRAMEWORK_VERSION: A
         GCC_MODEL_TUNING: G5
         GCC_PRECOMPILE_PREFIX_HEADER: YES
-        GCC_PREFIX_HEADER: source/FrameworkXCore_Prefix.pch
+        GCC_PREFIX_HEADER: FxCore_Prefix.pch
         HEADER_SEARCH_PATHS: /usr/include/libxml2
         INFOPLIST_FILE: Info.plist
         PRODUCT_NAME: FrameworkXCore
