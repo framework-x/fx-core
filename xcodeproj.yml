@@ -13,6 +13,9 @@ targets:
       frameworks:
         - Foundation
         - LibICU
+      headers:
+        files:
+          - "source/**/*.h"
     build_configurations:
       debug:
         ALWAYS_SEARCH_USER_PATHS: NO
