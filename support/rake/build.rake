@@ -7,7 +7,7 @@ namespace :build do
   end
   
   desc "compile the framework"
-  task :framework => %w[xcodeproj:generate] do
+  task :framework => %w[xcodeprojgen] do
     sh "xcodebuild -project FrameworkXCore.xcodeproj -sdk macosx10.5 -configuration Debug -target FrameworkXCore"
   end
 

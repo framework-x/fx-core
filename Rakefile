@@ -11,11 +11,11 @@ end
 task :default => :test
 task :pc => :test
 
-namespace :xcodeproj do
-  desc "Generate the xcodeproj file"
-  task :generate do
-    # removed
-  end
+desc "Generate the xcodeproj file"
+task :xcodeprojgen do
+  sh "xcodeprojgen"
+  sh "rm -rf FrameworkXCore.xcodeproj"
+  sh "mv fx-core.xcodeproj FrameworkXCore.xcodeproj"
 end
 
 desc "run the tests"

@@ -69,7 +69,7 @@ targets:
         GCC_PRECOMPILE_PREFIX_HEADER: YES
         GCC_PREFIX_HEADER: "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h"
         HEADER_SEARCH_PATHS: /usr/include/libxml2
-        INFOPLIST_FILE: "Untitled-Info.plist"
+        INFOPLIST_FILE: "Info.plist"
         INSTALL_PATH: "$(USER_LIBRARY_DIR)/Bundles"
         OTHER_LDFLAGS:
           - "-framework"
@@ -90,7 +90,7 @@ targets:
         GCC_PRECOMPILE_PREFIX_HEADER: YES
         GCC_PREFIX_HEADER: "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h"
         HEADER_SEARCH_PATHS: /usr/include/libxml2
-        INFOPLIST_FILE: "Untitled-Info.plist"
+        INFOPLIST_FILE: "Info.plist"
         INSTALL_PATH: "$(USER_LIBRARY_DIR)/Bundles"
         OTHER_LDFLAGS:
           - "-framework"
