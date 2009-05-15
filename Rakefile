@@ -13,10 +13,9 @@ task :pc => :test
 
 desc "Generate the xcodeproj file"
 task :xcodeprojgen do
-  puts "commented out for now"
-  # sh "xcodeprojgen"
-  # sh "rm -rf FrameworkXCore.xcodeproj"
-  # sh "mv fx-core.xcodeproj FrameworkXCore.xcodeproj"
+  sh "xcodeprojgen"
+  sh "rm -rf FrameworkXCore.xcodeproj"
+  sh "mv fx-core.xcodeproj FrameworkXCore.xcodeproj"
 end
 
 desc "run the tests"
